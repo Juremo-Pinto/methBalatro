@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dqtrwgwg176eu"]
+
+[ext_resource type="Script" uid="uid://yw1qbf5tj75r" path="res://Scripts/Cards/Generation/Specifics/OperatorGen.cs" id="1_mi1jf"]
+[ext_resource type="Shader" uid="uid://coqhkbswe4pxr" path="res://Shaders/floatyThingie.gdshader" id="2_fh2ck"]
+[ext_resource type="Script" uid="uid://brd5wqcqpn4oo" path="res://Scripts/Cards/Generation/CardAppearanceController.cs" id="4_8qwa6"]
+[ext_resource type="Texture2D" uid="uid://c4lal1cln1m3v" path="res://Assets/Sprites/Cards/DepthBorders/OpSideBorder.png" id="10_k46oy"]
+[ext_resource type="Texture2D" uid="uid://dld0apx83rbxc" path="res://Assets/Sprites/Cards/DepthBorders/OpBottomBorder.png" id="11_d0etm"]
+[ext_resource type="Texture2D" uid="uid://bf87dja72ompf" path="res://Assets/Sprites/Cards/Ops/opDiv.png" id="12_4724r"]
+[ext_resource type="Texture2D" uid="uid://kpx8hs63g45f" path="res://Assets/Sprites/Cards/Ops/opElev.png" id="13_t48b4"]
+[ext_resource type="Texture2D" uid="uid://cmouc60r0xr8m" path="res://Assets/Sprites/Cards/Ops/opMinus.png" id="14_t52np"]
+[ext_resource type="Texture2D" uid="uid://dksk2axanwxss" path="res://Assets/Sprites/Cards/Ops/opMult.png" id="15_ohrju"]
+[ext_resource type="Texture2D" uid="uid://ukp1154vk5f5" path="res://Assets/Sprites/Cards/Ops/opPlus.png" id="16_5fdpt"]
+[ext_resource type="Texture2D" uid="uid://flrw8rdwimi3" path="res://Assets/Sprites/Cards/Ops/opRoot.png" id="17_2ukbf"]
+[ext_resource type="Script" uid="uid://by7c0bdi2lo6b" path="res://Scripts/Cards/Manipulation/Drag.cs" id="29_a8qjo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ri7v3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wlnma"]
+shader = ExtResource("2_fh2ck")
+shader_parameter/shift_amount = 10.0
+shader_parameter/float_speed = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(13.811165, 18.695599)
+
+[node name="Operator" type="Control" unique_id=874623318]
+z_index = 2
+material = SubResource("ShaderMaterial_ri7v3")
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_mi1jf")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=670839959]
+z_index = 1
+material = SubResource("ShaderMaterial_wlnma")
+position = Vector2(9.5, -9.5)
+scale = Vector2(0.040000003, 0.040000003)
+texture = ExtResource("12_4724r")
+region_enabled = true
+region_rect = Rect2(240.01688, 0, 1799.9832, 1800.021)
+script = ExtResource("4_8qwa6")
+textCards = Array[Texture2D]([ExtResource("12_4724r"), ExtResource("13_t48b4"), ExtResource("14_t52np"), ExtResource("15_ohrju"), ExtResource("16_5fdpt"), ExtResource("17_2ukbf")])
+
+[node name="Sprite2" type="Sprite2D" parent="Sprite" unique_id=1774825820]
+z_index = -1
+material = SubResource("ShaderMaterial_wlnma")
+position = Vector2(-118.749985, 118.749985)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("10_k46oy")
+region_rect = Rect2(240.01688, 0, 1799.9832, 2519.995)
+
+[node name="Sprite3" type="Sprite2D" parent="Sprite" unique_id=648667448]
+z_index = -2
+material = SubResource("ShaderMaterial_wlnma")
+position = Vector2(-118.749985, 118.749985)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("11_d0etm")
+region_rect = Rect2(240.01688, 0, 1799.9832, 2519.995)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=162796849]
+z_index = 2
+scale = Vector2(0.215, 0.215)
+collision_layer = 3
+script = ExtResource("29_a8qjo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1758491384]
+visible = false
+position = Vector2(-2.148235e-06, 2.3255885)
+scale = Vector2(27.615005, 27.615005)
+shape = SubResource("RectangleShape2D_h2yge")

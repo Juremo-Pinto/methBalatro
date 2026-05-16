@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://cldo6q0mln20j"]
+
+[ext_resource type="Script" uid="uid://2lldksa0tm38" path="res://Scripts/Cards/Generation/Specifics/PerkGen.cs" id="1_dunle"]
+[ext_resource type="Shader" uid="uid://coqhkbswe4pxr" path="res://Shaders/floatyThingie.gdshader" id="2_8jcdx"]
+[ext_resource type="Script" uid="uid://brd5wqcqpn4oo" path="res://Scripts/Cards/Generation/CardAppearanceController.cs" id="4_e5now"]
+[ext_resource type="Texture2D" uid="uid://bfuo2qdtnabkn" path="res://Assets/Sprites/Cards/DepthBorders/PerkBottomBorder.png" id="5_gfph0"]
+[ext_resource type="Texture2D" uid="uid://8yck6ccghjsl" path="res://Assets/Sprites/Cards/Prk/balanceCoin.png" id="5_n70ek"]
+[ext_resource type="Texture2D" uid="uid://t15ctd3ug6mc" path="res://Assets/Sprites/Cards/Prk/chaoticArtifact.png" id="6_ii65u"]
+[ext_resource type="Texture2D" uid="uid://boxt3eo6idth2" path="res://Assets/Sprites/Cards/DepthBorders/PerkSideBorder.png" id="6_or0bs"]
+[ext_resource type="Texture2D" uid="uid://dkt61ylfa51ga" path="res://Assets/Sprites/Cards/Prk/differentlyOdd.png" id="7_d61gp"]
+[ext_resource type="Texture2D" uid="uid://p06n3vak7ue1" path="res://Assets/Sprites/Cards/Prk/divideTalisman.png" id="8_hqgj3"]
+[ext_resource type="Texture2D" uid="uid://cahesjetd4fu2" path="res://Assets/Sprites/Cards/Prk/equallyEven.png" id="9_q4e17"]
+[ext_resource type="Texture2D" uid="uid://33ogvt8cqv5n" path="res://Assets/Sprites/Cards/Prk/inateSum.png" id="10_cvlps"]
+[ext_resource type="Texture2D" uid="uid://crvffhh2tspcw" path="res://Assets/Sprites/Cards/Prk/multiIchor.png" id="11_c1fmg"]
+[ext_resource type="Script" uid="uid://by7c0bdi2lo6b" path="res://Scripts/Cards/Manipulation/Drag.cs" id="29_6ahev"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ri7v3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wlnma"]
+shader = ExtResource("2_8jcdx")
+shader_parameter/shift_amount = 10.0
+shader_parameter/float_speed = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(13.811165, 18.695599)
+
+[node name="Perk" type="Control" unique_id=874623318]
+z_index = 2
+material = SubResource("ShaderMaterial_ri7v3")
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dunle")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=670839959]
+z_index = 1
+material = SubResource("ShaderMaterial_wlnma")
+position = Vector2(9.5, -9.5)
+scale = Vector2(0.040000003, 0.040000003)
+texture = ExtResource("5_n70ek")
+region_enabled = true
+region_rect = Rect2(240.01688, 0, 1799.9832, 1379.9327)
+script = ExtResource("4_e5now")
+textCards = Array[Texture2D]([ExtResource("5_n70ek"), ExtResource("6_ii65u"), ExtResource("7_d61gp"), ExtResource("8_hqgj3"), ExtResource("9_q4e17"), ExtResource("10_cvlps"), ExtResource("11_c1fmg")])
+
+[node name="Sprite2" type="Sprite2D" parent="Sprite" unique_id=2068105028]
+z_index = -2
+material = SubResource("ShaderMaterial_wlnma")
+position = Vector2(-118.749985, 118.749985)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("5_gfph0")
+region_rect = Rect2(240.01688, 0, 1799.9832, 1379.9327)
+
+[node name="Sprite3" type="Sprite2D" parent="Sprite" unique_id=2115448181]
+z_index = -1
+material = SubResource("ShaderMaterial_wlnma")
+position = Vector2(-118.749985, 118.749985)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("6_or0bs")
+region_rect = Rect2(240.01688, 0, 1799.9832, 1379.9327)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=162796849]
+z_index = 2
+scale = Vector2(0.215, 0.215)
+collision_layer = 3
+script = ExtResource("29_6ahev")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1758491384]
+visible = false
+position = Vector2(-2.148235e-06, 2.3255885)
+scale = Vector2(27.615005, 27.615005)
+shape = SubResource("RectangleShape2D_h2yge")
