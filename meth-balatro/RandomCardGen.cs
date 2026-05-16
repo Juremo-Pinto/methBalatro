@@ -4,6 +4,8 @@ using System;
 public partial class RandomCardGen : Sprite2D
 {
 	[Export]
+	public Texture2D[] textCardsPrk;
+	[Export]
 	public Texture2D[] textCardsOp;
 	[Export]
 	public Texture2D[] textCardsNum;
@@ -14,12 +16,14 @@ public partial class RandomCardGen : Sprite2D
 
 	public void Initialize()
 	{
-		cardGenType parentCard = GetParent<cardGenType>();
+		var parentCard = GetParent<cardGenType>();
 
-		if (parentCard.varNonOp)
+		if (parentCard.varNum)
 			Texture = textCardsNum[parentCard.valCardNum];
+		else if (parentCard.varOp)
+			Texture = textCardsOp[parentCard.valCardOp];
 		else
-			Texture = textCardsOp[(int)parentCard.valCardOp];
+			Texture = textCardsPrk[parentCard.valCardPrk];
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
