@@ -1,3 +1,14 @@
 [gd_scene format=3 uid="uid://cj6osvkpfwhl"]
 
+[ext_resource type="Script" uid="uid://cv6woxtkhvnrj" path="res://Spritescript.cs" id="1_ig7tw"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_0xm2m"]
+
 [node name="Node2D" type="Node2D" unique_id=1913228894]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=670839959]
+scale = Vector2(3, 6)
+texture = SubResource("ImageTexture_0xm2m")
+script = ExtResource("1_ig7tw")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=526358581]
