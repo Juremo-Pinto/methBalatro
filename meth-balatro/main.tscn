@@ -1,45 +1,45 @@
 [gd_scene format=3 uid="uid://cj6osvkpfwhl"]
 
-[ext_resource type="Texture2D" uid="uid://b44kmv3iqdk65" path="res://1d400e79e924b844848049f3e52172b2.jpg" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://dcfxm3hh56100" path="res://cardGenType.cs" id="1_getpj"]
 [ext_resource type="Script" uid="uid://by7c0bdi2lo6b" path="res://Drag.cs" id="2_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://b6mnv2pyo8xsy" path="res://aa97f2eda8896287973d0a9b7e22fa59.jpg" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://brd5wqcqpn4oo" path="res://RandomCardGen.cs" id="3_ryguw"]
+[ext_resource type="Texture2D" uid="uid://bf87dja72ompf" path="res://Assets/Sprites/Cards/Ops/opDiv.png" id="4_d13ii"]
+[ext_resource type="Texture2D" uid="uid://kpx8hs63g45f" path="res://Assets/Sprites/Cards/Ops/opElev.png" id="5_1u8w0"]
+[ext_resource type="Texture2D" uid="uid://cmouc60r0xr8m" path="res://Assets/Sprites/Cards/Ops/opMinus.png" id="6_0odxb"]
+[ext_resource type="Texture2D" uid="uid://dksk2axanwxss" path="res://Assets/Sprites/Cards/Ops/opMult.png" id="7_lswn8"]
+[ext_resource type="Texture2D" uid="uid://ukp1154vk5f5" path="res://Assets/Sprites/Cards/Ops/opPlus.png" id="8_a6jrf"]
+[ext_resource type="Texture2D" uid="uid://flrw8rdwimi3" path="res://Assets/Sprites/Cards/Ops/opRoot.png" id="9_xuqvo"]
+[ext_resource type="Texture2D" uid="uid://0fv42v0c0j50" path="res://Assets/Sprites/Cards/Num/tile0.png" id="10_qsp4k"]
+[ext_resource type="Texture2D" uid="uid://dg47vvjyo6232" path="res://Assets/Sprites/Cards/Num/tile1.png" id="11_kq58d"]
+[ext_resource type="Texture2D" uid="uid://cbfkomx6lxvd7" path="res://Assets/Sprites/Cards/Num/tile2.png" id="12_seu75"]
+[ext_resource type="Texture2D" uid="uid://b4spogf821o1a" path="res://Assets/Sprites/Cards/Num/tile3.png" id="13_htxhm"]
+[ext_resource type="Texture2D" uid="uid://b0tdl3ubkod8u" path="res://Assets/Sprites/Cards/Num/tile4.png" id="14_jq2sk"]
+[ext_resource type="Texture2D" uid="uid://cyce82cf28yg2" path="res://Assets/Sprites/Cards/Num/tile5.png" id="15_4k2k6"]
+[ext_resource type="Texture2D" uid="uid://bkqrcgsiq07ot" path="res://Assets/Sprites/Cards/Num/tile6.png" id="16_0rl1p"]
+[ext_resource type="Texture2D" uid="uid://0laj3adv21m4" path="res://Assets/Sprites/Cards/Num/tile7.png" id="17_ok6jj"]
+[ext_resource type="Texture2D" uid="uid://c5igu5sr5up8b" path="res://Assets/Sprites/Cards/Num/tile8.png" id="18_facbu"]
+[ext_resource type="Texture2D" uid="uid://d0k13e6jt0uu7" path="res://Assets/Sprites/Cards/Num/tile9.png" id="19_b1qrp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 
-[node name="Node2D" type="Node2D" unique_id=1913228894]
+[node name="Node2D" type="Control" unique_id=874623318]
+z_index = 2
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_getpj")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2057351637]
-position = Vector2(-11, 4.9999847)
-scale = Vector2(2.9999235, 2.8255787)
+[node name="Sprite" type="Sprite2D" parent="." unique_id=670839959]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("10_qsp4k")
+script = ExtResource("3_ryguw")
+textCardsOp = Array[Texture2D]([ExtResource("4_d13ii"), ExtResource("5_1u8w0"), ExtResource("6_0odxb"), ExtResource("7_lswn8"), ExtResource("8_a6jrf"), ExtResource("9_xuqvo")])
+textCardsNum = Array[Texture2D]([ExtResource("10_qsp4k"), ExtResource("11_kq58d"), ExtResource("12_seu75"), ExtResource("13_htxhm"), ExtResource("14_jq2sk"), ExtResource("15_4k2k6"), ExtResource("16_0rl1p"), ExtResource("17_ok6jj"), ExtResource("18_facbu"), ExtResource("19_b1qrp")])
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=209431728]
-offset_left = -587.0
-offset_top = -318.00006
-offset_right = 742.0
-offset_bottom = 186.99994
-
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1355407516]
-disable_3d = true
-handle_input_locally = false
-physics_object_picking = true
-size = Vector2i(1155, 644)
-render_target_update_mode = 4
-
-[node name="Node2D" type="Node2D" parent="SubViewportContainer/SubViewport" unique_id=1939145603]
-position = Vector2(454, 319.00006)
+[node name="Area2D" type="Area2D" parent="." unique_id=162796849]
+z_index = 2
 scale = Vector2(0.215, 0.215)
-
-[node name="Sprite" type="Sprite2D" parent="SubViewportContainer/SubViewport/Node2D" unique_id=670839959]
-texture = ExtResource("1_0xm2m")
-
-[node name="Area2D" type="Area2D" parent="SubViewportContainer/SubViewport/Node2D" unique_id=162796849]
 script = ExtResource("2_0xm2m")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/Node2D/Area2D" unique_id=1758491384]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1758491384]
 scale = Vector2(27.615, 27.615)
 shape = SubResource("RectangleShape2D_h2yge")
-
-[node name="Sprite" type="Sprite2D" parent="SubViewportContainer/SubViewport/Node2D/Area2D" unique_id=269983217]
-position = Vector2(0, -10.141553)
-scale = Vector2(0.3733699, 0.37965456)
-texture = ExtResource("3_h2yge")
