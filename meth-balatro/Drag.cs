@@ -1,7 +1,5 @@
 using Godot;
 using System;
-using System.Drawing;
-using System.Reflection;
 
 public partial class Drag : Area2D
 {
