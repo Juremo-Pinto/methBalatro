@@ -23,6 +23,11 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="methBalatro"
 
+[layer_names]
+
+2d_render/layer_1="everything"
+2d_render/layer_2="cardies"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
