@@ -21,7 +21,7 @@ shader_parameter/shift_amount = 10.0
 shader_parameter/float_speed = 2.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
-size = Vector2(13.811165, 18.695599)
+size = Vector2(12.463729, 12.63216)
 
 [node name="Operator" type="Control" unique_id=874623318]
 z_index = 2
@@ -65,6 +65,6 @@ script = ExtResource("29_a8qjo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1758491384]
 visible = false
-position = Vector2(-2.148235e-06, 2.3255885)
-scale = Vector2(27.615005, 27.615005)
+position = Vector2(23.25581, -20.930231)
+scale = Vector2(27.615017, 27.615017)
 shape = SubResource("RectangleShape2D_h2yge")
