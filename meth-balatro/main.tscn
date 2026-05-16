@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://b44kmv3iqdk65" path="res://1d400e79e924b844848049f3e52172b2.jpg" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://by7c0bdi2lo6b" path="res://Drag.cs" id="2_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://b6mnv2pyo8xsy" path="res://aa97f2eda8896287973d0a9b7e22fa59.jpg" id="3_h2yge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 
@@ -38,8 +37,3 @@ script = ExtResource("2_0xm2m")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/Node2D/Area2D" unique_id=1758491384]
 scale = Vector2(27.615, 27.615)
 shape = SubResource("RectangleShape2D_h2yge")
-
-[node name="Sprite" type="Sprite2D" parent="SubViewportContainer/SubViewport/Node2D/Area2D" unique_id=269983217]
-position = Vector2(0, -10.141553)
-scale = Vector2(0.3733699, 0.37965456)
-texture = ExtResource("3_h2yge")
