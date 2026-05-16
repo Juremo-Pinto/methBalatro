@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://vmvrkch1qksg"]
+
+[ext_resource type="Texture2D" uid="uid://0fv42v0c0j50" path="res://Assets/Sprites/Cards/Num/tile0.png" id="1_glimj"]
+[ext_resource type="Script" uid="uid://cpbntu3x1tprg" path="res://normalTexties.cs" id="2_5fqtv"]
+[ext_resource type="Texture2D" uid="uid://dg47vvjyo6232" path="res://Assets/Sprites/Cards/Num/tile1.png" id="3_swrw8"]
+[ext_resource type="Texture2D" uid="uid://cbfkomx6lxvd7" path="res://Assets/Sprites/Cards/Num/tile2.png" id="4_nyfev"]
+[ext_resource type="Texture2D" uid="uid://b4spogf821o1a" path="res://Assets/Sprites/Cards/Num/tile3.png" id="5_ibewi"]
+[ext_resource type="Texture2D" uid="uid://b0tdl3ubkod8u" path="res://Assets/Sprites/Cards/Num/tile4.png" id="6_36rvf"]
+[ext_resource type="Texture2D" uid="uid://cyce82cf28yg2" path="res://Assets/Sprites/Cards/Num/tile5.png" id="7_0116t"]
+[ext_resource type="Texture2D" uid="uid://bkqrcgsiq07ot" path="res://Assets/Sprites/Cards/Num/tile6.png" id="8_yrdsh"]
+[ext_resource type="Texture2D" uid="uid://0laj3adv21m4" path="res://Assets/Sprites/Cards/Num/tile7.png" id="9_wbu3q"]
+[ext_resource type="Texture2D" uid="uid://c5igu5sr5up8b" path="res://Assets/Sprites/Cards/Num/tile8.png" id="10_kum8f"]
+[ext_resource type="Texture2D" uid="uid://d0k13e6jt0uu7" path="res://Assets/Sprites/Cards/Num/tile9.png" id="11_shng4"]
+
+[node name="Node2D" type="Node2D" unique_id=878586670]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2110199142]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("1_glimj")
+script = ExtResource("2_5fqtv")
+valNumerosText = Array[Texture2D]([ExtResource("1_glimj"), ExtResource("3_swrw8"), ExtResource("4_nyfev"), ExtResource("5_ibewi"), ExtResource("6_36rvf"), ExtResource("7_0116t"), ExtResource("8_yrdsh"), ExtResource("9_wbu3q"), ExtResource("10_kum8f"), ExtResource("11_shng4")])
+placarTentativas = true

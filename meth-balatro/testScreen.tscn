@@ -12,6 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://co78hor07ul5a" path="res://menuScreen.tscn" id="10_7plli"]
 [ext_resource type="Script" uid="uid://bre236e8uivgt" path="res://detectingCardiesYippee.cs" id="11_r6yns"]
 [ext_resource type="Script" uid="uid://b11nho4bgs00l" path="res://MathEventBus.cs" id="12_44i4l"]
+[ext_resource type="Texture2D" uid="uid://b76ng61nhxenp" path="res://Assets/Sprites/Cards/DepthBorders/SideBorderNumber.png" id="12_truqb"]
+[ext_resource type="PackedScene" uid="uid://vmvrkch1qksg" path="res://textiesThingies.tscn" id="13_2e8dp"]
+[ext_resource type="Texture2D" uid="uid://cyce82cf28yg2" path="res://Assets/Sprites/Cards/Num/tile5.png" id="13_l4pb6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r6yns"]
 shader = ExtResource("4_mj4ja")
@@ -288,6 +291,29 @@ offset_bottom = 505.0
 flat = true
 script = ExtResource("9_mj4ja")
 menuScene = ExtResource("10_7plli")
+
+[node name="Node2D" parent="CanvasLayer" unique_id=878586670 instance=ExtResource("13_2e8dp")]
+modulate = Color(1, 1, 0.48235294, 1)
+z_index = 2
+position = Vector2(292, 95)
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=2001334555]
+modulate = Color(1, 1, 0.48235294, 1)
+offset_left = 345.0
+offset_top = 46.0
+offset_right = 443.0
+offset_bottom = 148.0
+texture = ExtResource("12_truqb")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer" unique_id=147591595]
+modulate = Color(1, 1, 0.48235294, 1)
+offset_left = 368.0
+offset_top = 39.0
+offset_right = 451.0
+offset_bottom = 150.0
+texture = ExtResource("13_l4pb6")
+expand_mode = 1
 
 [node name="Area2D" type="Area2D" parent="CanvasLayer" unique_id=844922641]
 position = Vector2(535, 355)

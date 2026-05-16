@@ -11,6 +11,8 @@ public partial class MathEventBus : Node
 	[Signal]
 	public delegate void MathSuccessEventHandler(string result);
 
+	public int numTentativas {get; private set;} = 1;
+
 	public override void _Ready()
 	{
 		if (Instance != null && Instance != this)
@@ -36,5 +38,6 @@ public partial class MathEventBus : Node
 	public void EmitSuccess(string result)
 	{
 		EmitSignal(SignalName.MathSuccess, result);
+		numTentativas++;
 	}
 }
