@@ -1,33 +1,33 @@
 [gd_scene format=3 uid="uid://li8q2g1dch6a"]
 
-[ext_resource type="PackedScene" uid="uid://cj6osvkpfwhl" path="res://Scenes/Card.tscn" id="2_d50wg"]
-[ext_resource type="Texture2D" uid="uid://dhbjkr3cd3ir7" path="res://Assets/Sprites/HUD/hud.png" id="2_kt8ro"]
-[ext_resource type="Texture2D" uid="uid://dssk4ivf4knev" path="res://Assets/Sprites/HUD/botUi100.png" id="3_5jv84"]
-[ext_resource type="Texture2D" uid="uid://bgdfx0j27xdj0" path="res://Assets/Sprites/HUD/midUi89.png" id="4_3voo3"]
-[ext_resource type="Shader" uid="uid://b6nnh8pik7js1" path="res://Shaders/shaderBgBottom.gdshader" id="4_mj4ja"]
-[ext_resource type="Shader" uid="uid://djwxoaguhnkyf" path="res://Shaders/shaderBgMid.gdshader" id="5_mj4ja"]
-[ext_resource type="Texture2D" uid="uid://dvsf17gfaf1gy" path="res://Assets/Sprites/HUD/topUi72.png" id="5_xgnp8"]
-[ext_resource type="Shader" uid="uid://coe86qsnp2m51" path="res://Shaders/shaderbgTop.gdshader" id="7_7plli"]
-[ext_resource type="Script" uid="uid://y7hpdtv0lqci" path="res://Scripts/Menu/openMenuClick.cs" id="9_mj4ja"]
-[ext_resource type="PackedScene" uid="uid://co78hor07ul5a" path="res://Scenes/menuScreen.tscn" id="10_7plli"]
-[ext_resource type="Script" uid="uid://bre236e8uivgt" path="res://Scripts/Cards/Detection/detectingCardiesYippee.cs" id="11_r6yns"]
-[ext_resource type="Script" uid="uid://b11nho4bgs00l" path="res://Scripts/MathEventBus.cs" id="12_44i4l"]
-[ext_resource type="Texture2D" uid="uid://b76ng61nhxenp" path="res://Assets/Sprites/Cards/DepthBorders/SideBorderNumber.png" id="12_truqb"]
-[ext_resource type="PackedScene" uid="uid://vmvrkch1qksg" path="res://Scenes/textiesThingies.tscn" id="13_2e8dp"]
-[ext_resource type="Texture2D" uid="uid://cyce82cf28yg2" path="res://Assets/Sprites/Cards/Num/tile5.png" id="13_l4pb6"]
+[ext_resource type="PackedScene" uid="uid://cj6osvkpfwhl" path="res://Scenes/Cards/Card.tscn" id="1_wyocf"]
+[ext_resource type="Texture2D" uid="uid://dhbjkr3cd3ir7" path="res://Assets/Sprites/HUD/hud.png" id="2_ktwve"]
+[ext_resource type="Shader" uid="uid://b6nnh8pik7js1" path="res://Shaders/shaderBgBottom.gdshader" id="3_r5sjn"]
+[ext_resource type="Texture2D" uid="uid://dssk4ivf4knev" path="res://Assets/Sprites/HUD/botUi100.png" id="4_yc6xl"]
+[ext_resource type="Shader" uid="uid://djwxoaguhnkyf" path="res://Shaders/shaderBgMid.gdshader" id="5_k6vqf"]
+[ext_resource type="Texture2D" uid="uid://bgdfx0j27xdj0" path="res://Assets/Sprites/HUD/midUi89.png" id="6_ev6kq"]
+[ext_resource type="Shader" uid="uid://coe86qsnp2m51" path="res://Shaders/shaderbgTop.gdshader" id="7_jn25s"]
+[ext_resource type="Texture2D" uid="uid://dvsf17gfaf1gy" path="res://Assets/Sprites/HUD/topUi72.png" id="8_glaac"]
+[ext_resource type="Script" uid="uid://y7hpdtv0lqci" path="res://Scripts/Menu/openMenuClick.cs" id="9_7p2u3"]
+[ext_resource type="PackedScene" uid="uid://co78hor07ul5a" path="res://Scenes/menuScreen.tscn" id="10_him8o"]
+[ext_resource type="PackedScene" uid="uid://vmvrkch1qksg" path="res://Scenes/textiesThingies.tscn" id="11_fgk2h"]
+[ext_resource type="Texture2D" uid="uid://b76ng61nhxenp" path="res://Assets/Sprites/Cards/DepthBorders/SideBorderNumber.png" id="12_wn26v"]
+[ext_resource type="Texture2D" uid="uid://cyce82cf28yg2" path="res://Assets/Sprites/Cards/Num/tile5.png" id="13_cmrup"]
+[ext_resource type="Script" uid="uid://bre236e8uivgt" path="res://Scripts/Cards/Detection/detectingCardiesYippee.cs" id="14_im1vy"]
+[ext_resource type="Script" uid="uid://b11nho4bgs00l" path="res://Scripts/MathEventBus.cs" id="15_yy0n7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r6yns"]
-shader = ExtResource("4_mj4ja")
+shader = ExtResource("3_r5sjn")
 shader_parameter/shift_amount = 10.0
 shader_parameter/float_speed = 3.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_44i4l"]
-shader = ExtResource("5_mj4ja")
+shader = ExtResource("5_k6vqf")
 shader_parameter/shift_amount = 10.0
 shader_parameter/float_speed = 3.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2e8dp"]
-shader = ExtResource("7_7plli")
+shader = ExtResource("7_jn25s")
 shader_parameter/shift_amount = 10.0
 shader_parameter/float_speed = 3.0
 
@@ -38,7 +38,7 @@ size = Vector2(611, 221)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2081705996]
 
-[node name="CardO1" parent="CanvasLayer" unique_id=1913228894 instance=ExtResource("2_d50wg")]
+[node name="CardO1" parent="CanvasLayer" unique_id=1913228894 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.24131945
@@ -52,7 +52,7 @@ offset_bottom = -477.0
 varOp = true
 metadata/_edit_use_anchors_ = true
 
-[node name="CardO4" parent="CanvasLayer" unique_id=217617556 instance=ExtResource("2_d50wg")]
+[node name="CardO4" parent="CanvasLayer" unique_id=217617556 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.6970486
@@ -66,7 +66,7 @@ offset_bottom = -123.0
 varOp = true
 metadata/_edit_use_anchors_ = true
 
-[node name="CardO3" parent="CanvasLayer" unique_id=1956987471 instance=ExtResource("2_d50wg")]
+[node name="CardO3" parent="CanvasLayer" unique_id=1956987471 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.5399306
@@ -80,7 +80,7 @@ offset_bottom = -239.0
 varOp = true
 metadata/_edit_use_anchors_ = true
 
-[node name="CardO2" parent="CanvasLayer" unique_id=332989372 instance=ExtResource("2_d50wg")]
+[node name="CardO2" parent="CanvasLayer" unique_id=332989372 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.39322916
@@ -94,7 +94,7 @@ offset_bottom = -355.0
 varOp = true
 metadata/_edit_use_anchors_ = true
 
-[node name="CardN1" parent="CanvasLayer" unique_id=427854329 instance=ExtResource("2_d50wg")]
+[node name="CardN1" parent="CanvasLayer" unique_id=427854329 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.09548611
@@ -108,7 +108,7 @@ offset_bottom = 473.0
 varNum = true
 metadata/_edit_use_anchors_ = true
 
-[node name="CardN4" parent="CanvasLayer" unique_id=1125999039 instance=ExtResource("2_d50wg")]
+[node name="CardN4" parent="CanvasLayer" unique_id=1125999039 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.10069445
@@ -122,7 +122,7 @@ offset_bottom = 136.00003
 varNum = true
 metadata/_edit_use_anchors_ = true
 
-[node name="CardN5" parent="CanvasLayer" unique_id=1684986371 instance=ExtResource("2_d50wg")]
+[node name="CardN5" parent="CanvasLayer" unique_id=1684986371 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.10069445
@@ -136,7 +136,7 @@ offset_bottom = 137.00003
 varNum = true
 metadata/_edit_use_anchors_ = true
 
-[node name="CardN2" parent="CanvasLayer" unique_id=538861363 instance=ExtResource("2_d50wg")]
+[node name="CardN2" parent="CanvasLayer" unique_id=538861363 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.112847224
@@ -150,7 +150,7 @@ offset_bottom = 359.0
 varNum = true
 metadata/_edit_use_anchors_ = true
 
-[node name="CardN3" parent="CanvasLayer" unique_id=1868754310 instance=ExtResource("2_d50wg")]
+[node name="CardN3" parent="CanvasLayer" unique_id=1868754310 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.09201389
@@ -164,7 +164,7 @@ offset_bottom = 251.0
 varNum = true
 metadata/_edit_use_anchors_ = true
 
-[node name="CardP1" parent="CanvasLayer" unique_id=874623318 instance=ExtResource("2_d50wg")]
+[node name="CardP1" parent="CanvasLayer" unique_id=874623318 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.10069445
@@ -177,7 +177,7 @@ offset_right = 953.0
 offset_bottom = -181.99997
 metadata/_edit_use_anchors_ = true
 
-[node name="CardP2" parent="CanvasLayer" unique_id=477333285 instance=ExtResource("2_d50wg")]
+[node name="CardP2" parent="CanvasLayer" unique_id=477333285 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.112847224
@@ -190,7 +190,7 @@ offset_right = 838.0
 offset_bottom = 135.0
 metadata/_edit_use_anchors_ = true
 
-[node name="CardP3" parent="CanvasLayer" unique_id=1074150786 instance=ExtResource("2_d50wg")]
+[node name="CardP3" parent="CanvasLayer" unique_id=1074150786 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.09201389
@@ -214,7 +214,7 @@ offset_left = -12.010426
 offset_top = -18.0
 offset_right = -10.010376
 offset_bottom = -17.94403
-texture = ExtResource("2_kt8ro")
+texture = ExtResource("2_ktwve")
 expand_mode = 2
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
@@ -225,7 +225,7 @@ material = SubResource("ShaderMaterial_r6yns")
 layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 655.0
-texture = ExtResource("3_5jv84")
+texture = ExtResource("4_yc6xl")
 expand_mode = 1
 flip_v = true
 metadata/_edit_use_anchors_ = true
@@ -238,7 +238,7 @@ material = SubResource("ShaderMaterial_44i4l")
 layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 655.0
-texture = ExtResource("4_3voo3")
+texture = ExtResource("6_ev6kq")
 expand_mode = 1
 flip_h = true
 metadata/_edit_use_anchors_ = true
@@ -251,7 +251,7 @@ material = SubResource("ShaderMaterial_2e8dp")
 layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 655.0
-texture = ExtResource("5_xgnp8")
+texture = ExtResource("8_glaac")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
@@ -262,8 +262,8 @@ offset_top = 191.0
 offset_right = 232.0
 offset_bottom = 238.0
 flat = true
-script = ExtResource("9_mj4ja")
-menuScene = ExtResource("10_7plli")
+script = ExtResource("9_7p2u3")
+menuScene = ExtResource("10_him8o")
 
 [node name="Button2" type="Button" parent="CanvasLayer" unique_id=682308607]
 offset_left = 188.0
@@ -271,8 +271,8 @@ offset_top = 455.0
 offset_right = 231.0
 offset_bottom = 502.0
 flat = true
-script = ExtResource("9_mj4ja")
-menuScene = ExtResource("10_7plli")
+script = ExtResource("9_7p2u3")
+menuScene = ExtResource("10_him8o")
 
 [node name="Button3" type="Button" parent="CanvasLayer" unique_id=213524595]
 offset_left = 839.0
@@ -280,8 +280,8 @@ offset_top = 192.0
 offset_right = 882.0
 offset_bottom = 239.0
 flat = true
-script = ExtResource("9_mj4ja")
-menuScene = ExtResource("10_7plli")
+script = ExtResource("9_7p2u3")
+menuScene = ExtResource("10_him8o")
 
 [node name="Button4" type="Button" parent="CanvasLayer" unique_id=737844094]
 offset_left = 844.0
@@ -289,10 +289,10 @@ offset_top = 458.0
 offset_right = 887.0
 offset_bottom = 505.0
 flat = true
-script = ExtResource("9_mj4ja")
-menuScene = ExtResource("10_7plli")
+script = ExtResource("9_7p2u3")
+menuScene = ExtResource("10_him8o")
 
-[node name="Node2D" parent="CanvasLayer" unique_id=878586670 instance=ExtResource("13_2e8dp")]
+[node name="Node2D" parent="CanvasLayer" unique_id=878586670 instance=ExtResource("11_fgk2h")]
 modulate = Color(1, 1, 0.48235294, 1)
 z_index = 2
 position = Vector2(292, 95)
@@ -303,7 +303,7 @@ offset_left = 345.0
 offset_top = 46.0
 offset_right = 443.0
 offset_bottom = 148.0
-texture = ExtResource("12_truqb")
+texture = ExtResource("12_wn26v")
 expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer" unique_id=147591595]
@@ -312,7 +312,7 @@ offset_left = 368.0
 offset_top = 39.0
 offset_right = 451.0
 offset_bottom = 150.0
-texture = ExtResource("13_l4pb6")
+texture = ExtResource("13_cmrup")
 expand_mode = 1
 
 [node name="Area2D" type="Area2D" parent="CanvasLayer" unique_id=844922641]
@@ -321,11 +321,11 @@ collision_mask = 3
 input_pickable = false
 monitorable = false
 priority = -1
-script = ExtResource("11_r6yns")
+script = ExtResource("14_im1vy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Area2D" unique_id=1690537226]
 position = Vector2(7.5, -5.5)
 shape = SubResource("RectangleShape2D_44i4l")
 
 [node name="MathEventBus" type="Node" parent="." unique_id=1603242190]
-script = ExtResource("12_44i4l")
+script = ExtResource("15_yy0n7")
