@@ -41,46 +41,41 @@ size = Vector2(611, 221)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2081705996]
 
-[node name="PlacarAlvo" parent="CanvasLayer" unique_id=839575889 instance=ExtResource("15_ktwve")]
-z_index = 5
-position = Vector2(1100.6, 582.4)
-scale = Vector2(0.03, 0.03)
-intPos = 3
+[node name="PlacarAlvo" type="Node2D" parent="CanvasLayer" unique_id=1623511809]
 
-[node name="PlacarAlvo2" parent="CanvasLayer" unique_id=1756187233 instance=ExtResource("15_ktwve")]
+[node name="Digit0" parent="CanvasLayer/PlacarAlvo" unique_id=2141410384 instance=ExtResource("15_ktwve")]
 z_index = 5
-position = Vector2(1049.6, 582.4)
+position = Vector2(942.6, 581.4)
 scale = Vector2(0.03, 0.03)
-intPos = 2
 
-[node name="PlacarAlvo3" parent="CanvasLayer" unique_id=313875167 instance=ExtResource("15_ktwve")]
+[node name="Digit1" parent="CanvasLayer/PlacarAlvo" unique_id=313875167 instance=ExtResource("15_ktwve")]
 z_index = 5
 position = Vector2(995.39996, 581.60004)
 scale = Vector2(0.03, 0.03)
 intPos = 1
 
-[node name="PlacarAlvo4" parent="CanvasLayer" unique_id=2141410384 instance=ExtResource("15_ktwve")]
+[node name="Digit2" parent="CanvasLayer/PlacarAlvo" unique_id=1756187233 instance=ExtResource("15_ktwve")]
 z_index = 5
-position = Vector2(942.6, 581.4)
+position = Vector2(1049.6, 582.4)
 scale = Vector2(0.03, 0.03)
-
-[node name="PlacarAtual4" parent="CanvasLayer" unique_id=916403330 instance=ExtResource("15_ktwve")]
-modulate = Color(0.25766784, 1, 1, 1)
-z_index = 5
-position = Vector2(1085, 99)
-scale = Vector2(0.03, 0.03)
-isCurrent = true
-intPos = 3
-
-[node name="PlacarAtual3" parent="CanvasLayer" unique_id=438967438 instance=ExtResource("15_ktwve")]
-modulate = Color(0.25766784, 1, 1, 1)
-z_index = 5
-position = Vector2(1029.0001, 99)
-scale = Vector2(0.03, 0.03)
-isCurrent = true
 intPos = 2
 
-[node name="PlacarAtual2" parent="CanvasLayer" unique_id=74505768 instance=ExtResource("15_ktwve")]
+[node name="Digit3" parent="CanvasLayer/PlacarAlvo" unique_id=839575889 instance=ExtResource("15_ktwve")]
+z_index = 5
+position = Vector2(1100.6, 582.4)
+scale = Vector2(0.03, 0.03)
+intPos = 3
+
+[node name="PlacarAtual" type="Node2D" parent="CanvasLayer" unique_id=1330353505]
+
+[node name="Digit0" parent="CanvasLayer/PlacarAtual" unique_id=1324028418 instance=ExtResource("15_ktwve")]
+modulate = Color(0.25766784, 1, 1, 1)
+z_index = 5
+position = Vector2(918, 99.00001)
+scale = Vector2(0.03, 0.03)
+isCurrent = true
+
+[node name="Digit1" parent="CanvasLayer/PlacarAtual" unique_id=74505768 instance=ExtResource("15_ktwve")]
 modulate = Color(0.25766784, 1, 1, 1)
 z_index = 5
 position = Vector2(974, 99.00009)
@@ -88,71 +83,25 @@ scale = Vector2(0.03, 0.03)
 isCurrent = true
 intPos = 1
 
-[node name="PlacarAtual" parent="CanvasLayer" unique_id=1324028418 instance=ExtResource("15_ktwve")]
+[node name="Digit2" parent="CanvasLayer/PlacarAtual" unique_id=438967438 instance=ExtResource("15_ktwve")]
 modulate = Color(0.25766784, 1, 1, 1)
 z_index = 5
-position = Vector2(918, 99.00001)
+position = Vector2(1029.0001, 99)
 scale = Vector2(0.03, 0.03)
 isCurrent = true
+intPos = 2
 
-[node name="CardO1" parent="CanvasLayer" unique_id=1913228894 instance=ExtResource("1_wyocf")]
-top_level = true
-anchors_preset = -1
-anchor_left = 0.24131945
-anchor_top = 0.89506173
-anchor_right = 0.24131945
-anchor_bottom = 0.89506173
-offset_left = -171.0
-offset_top = -477.0
-offset_right = -171.0
-offset_bottom = -477.0
-varOp = true
-metadata/_edit_use_anchors_ = true
+[node name="Digit3" parent="CanvasLayer/PlacarAtual" unique_id=916403330 instance=ExtResource("15_ktwve")]
+modulate = Color(0.25766784, 1, 1, 1)
+z_index = 5
+position = Vector2(1085, 99)
+scale = Vector2(0.03, 0.03)
+isCurrent = true
+intPos = 3
 
-[node name="CardO4" parent="CanvasLayer" unique_id=217617556 instance=ExtResource("1_wyocf")]
-top_level = true
-anchors_preset = -1
-anchor_left = 0.6970486
-anchor_top = 0.89969134
-anchor_right = 0.6970486
-anchor_bottom = 0.89969134
-offset_left = -695.0
-offset_top = -123.0
-offset_right = -695.0
-offset_bottom = -123.0
-varOp = true
-metadata/_edit_use_anchors_ = true
+[node name="Cards" type="Node2D" parent="CanvasLayer" unique_id=1534890476]
 
-[node name="CardO3" parent="CanvasLayer" unique_id=1956987471 instance=ExtResource("1_wyocf")]
-top_level = true
-anchors_preset = -1
-anchor_left = 0.5399306
-anchor_top = 0.8935185
-anchor_right = 0.5399306
-anchor_bottom = 0.8935185
-offset_left = -514.0
-offset_top = -239.0
-offset_right = -514.0
-offset_bottom = -239.0
-varOp = true
-metadata/_edit_use_anchors_ = true
-
-[node name="CardO2" parent="CanvasLayer" unique_id=332989372 instance=ExtResource("1_wyocf")]
-top_level = true
-anchors_preset = -1
-anchor_left = 0.39322916
-anchor_top = 0.8888889
-anchor_right = 0.39322916
-anchor_bottom = 0.8888889
-offset_left = -347.0
-offset_top = -355.0
-offset_right = -347.0
-offset_bottom = -355.0
-varOp = true
-metadata/_edit_use_anchors_ = true
-
-[node name="CardN1" parent="CanvasLayer" unique_id=427854329 instance=ExtResource("1_wyocf")]
-[node name="Num1" parent="CanvasLayer" unique_id=427854329 instance=ExtResource("1_wyocf")]
+[node name="Num1" parent="CanvasLayer/Cards" unique_id=427854329 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.09548611
@@ -165,7 +114,7 @@ offset_right = 186.0
 offset_bottom = 473.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Num2" parent="CanvasLayer" unique_id=538861363 instance=ExtResource("1_wyocf")]
+[node name="Num2" parent="CanvasLayer/Cards" unique_id=538861363 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.112847224
@@ -178,7 +127,7 @@ offset_right = 302.0
 offset_bottom = 359.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Num3" parent="CanvasLayer" unique_id=1868754310 instance=ExtResource("1_wyocf")]
+[node name="Num3" parent="CanvasLayer/Cards" unique_id=1868754310 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.09201389
@@ -191,7 +140,7 @@ offset_right = 451.0
 offset_bottom = 251.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Num4" parent="CanvasLayer" unique_id=1125999039 instance=ExtResource("1_wyocf")]
+[node name="Num4" parent="CanvasLayer/Cards" unique_id=1125999039 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.10069445
@@ -204,7 +153,7 @@ offset_right = 561.0
 offset_bottom = 136.00003
 metadata/_edit_use_anchors_ = true
 
-[node name="Num5" parent="CanvasLayer" unique_id=1684986371 instance=ExtResource("1_wyocf")]
+[node name="Num5" parent="CanvasLayer/Cards" unique_id=1684986371 instance=ExtResource("1_wyocf")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.10069445
@@ -217,43 +166,43 @@ offset_right = 677.0
 offset_bottom = 137.00003
 metadata/_edit_use_anchors_ = true
 
-[node name="Operator" parent="CanvasLayer" unique_id=874623318 instance=ExtResource("2_r5sjn")]
+[node name="Operator" parent="CanvasLayer/Cards" unique_id=874623318 instance=ExtResource("2_r5sjn")]
 offset_left = 96.0
 offset_top = 155.0
 offset_right = 96.0
 offset_bottom = 155.0
 
-[node name="Operator2" parent="CanvasLayer" unique_id=121733765 instance=ExtResource("2_r5sjn")]
+[node name="Operator2" parent="CanvasLayer/Cards" unique_id=121733765 instance=ExtResource("2_r5sjn")]
 offset_left = 96.0
 offset_top = 270.0
 offset_right = 96.0
 offset_bottom = 270.0
 
-[node name="Operator3" parent="CanvasLayer" unique_id=482041286 instance=ExtResource("2_r5sjn")]
+[node name="Operator3" parent="CanvasLayer/Cards" unique_id=482041286 instance=ExtResource("2_r5sjn")]
 offset_left = 96.0
 offset_top = 388.0
 offset_right = 96.0
 offset_bottom = 388.0
 
-[node name="Operator4" parent="CanvasLayer" unique_id=1400772882 instance=ExtResource("2_r5sjn")]
+[node name="Operator4" parent="CanvasLayer/Cards" unique_id=1400772882 instance=ExtResource("2_r5sjn")]
 offset_left = 96.0
 offset_top = 506.0
 offset_right = 96.0
 offset_bottom = 506.0
 
-[node name="Perk" parent="CanvasLayer" unique_id=758262585 instance=ExtResource("3_yc6xl")]
+[node name="Perk" parent="CanvasLayer/Cards" unique_id=758262585 instance=ExtResource("3_yc6xl")]
 offset_left = 1061.0
 offset_top = 259.0
 offset_right = 1061.0
 offset_bottom = 259.0
 
-[node name="Perk2" parent="CanvasLayer" unique_id=269235605 instance=ExtResource("3_yc6xl")]
+[node name="Perk2" parent="CanvasLayer/Cards" unique_id=269235605 instance=ExtResource("3_yc6xl")]
 offset_left = 980.0
 offset_top = 351.0
 offset_right = 980.0
 offset_bottom = 351.0
 
-[node name="Perk3" parent="CanvasLayer" unique_id=385992484 instance=ExtResource("3_yc6xl")]
+[node name="Perk3" parent="CanvasLayer/Cards" unique_id=385992484 instance=ExtResource("3_yc6xl")]
 offset_left = 1061.0
 offset_top = 436.0
 offset_right = 1061.0

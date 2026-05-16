@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://m0fsf1lkt66y"]
 
 [ext_resource type="Texture2D" uid="uid://0fv42v0c0j50" path="res://Assets/Sprites/Cards/Num/tile0.png" id="1_ef4ov"]
-[ext_resource type="Script" uid="uid://c7utxr0mloy6j" path="res://placarPontos.cs" id="2_p6vlb"]
+[ext_resource type="Script" uid="uid://c7utxr0mloy6j" path="res://Scripts/Scoreboard/placarPontos.cs" id="2_p6vlb"]
 [ext_resource type="Texture2D" uid="uid://dg47vvjyo6232" path="res://Assets/Sprites/Cards/Num/tile1.png" id="3_nu5f7"]
 [ext_resource type="Texture2D" uid="uid://cbfkomx6lxvd7" path="res://Assets/Sprites/Cards/Num/tile2.png" id="4_t2tfe"]
 [ext_resource type="Texture2D" uid="uid://b4spogf821o1a" path="res://Assets/Sprites/Cards/Num/tile3.png" id="5_yy3kk"]

@@ -55,8 +55,4 @@ public partial class placarPontos : Sprite2D
 			Texture = valNumerosText[c - '0'];
 		}
 	}
-
-	public override void _Process(double delta)
-	{
-	}
 }
