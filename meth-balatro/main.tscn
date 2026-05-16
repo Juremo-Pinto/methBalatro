@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://d0k13e6jt0uu7" path="res://Assets/Sprites/Cards/Num/tile9.png" id="19_b1qrp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(13.811165, 18.695599)
 
 [node name="Node2D" type="Control" unique_id=874623318]
 z_index = 2
@@ -41,5 +42,13 @@ scale = Vector2(0.215, 0.215)
 script = ExtResource("2_0xm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1758491384]
-scale = Vector2(27.615, 27.615)
+position = Vector2(-2.148235e-06, 2.3255885)
+scale = Vector2(27.615005, 27.615005)
 shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Sprite" type="Sprite2D" parent="Area2D" unique_id=357716141]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("10_qsp4k")
+script = ExtResource("3_ryguw")
+textCardsOp = Array[Texture2D]([ExtResource("4_d13ii"), ExtResource("5_1u8w0"), ExtResource("6_0odxb"), ExtResource("7_lswn8"), ExtResource("8_a6jrf"), ExtResource("9_xuqvo")])
+textCardsNum = Array[Texture2D]([ExtResource("10_qsp4k"), ExtResource("11_kq58d"), ExtResource("12_seu75"), ExtResource("13_htxhm"), ExtResource("14_jq2sk"), ExtResource("15_4k2k6"), ExtResource("16_0rl1p"), ExtResource("17_ok6jj"), ExtResource("18_facbu"), ExtResource("19_b1qrp")])

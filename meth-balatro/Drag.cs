@@ -1,4 +1,5 @@
 using Godot;
+using Godot.Collections;
 using System;
 
 public partial class Drag : Area2D
@@ -6,7 +7,7 @@ public partial class Drag : Area2D
 	private Vector2 OriginalPos;
 	private Vector2 TargetPos;
 	private bool Hold;
-
+	public bool MouseOver = false;
 
 	private Sprite2D sprite;
 
@@ -25,9 +26,41 @@ public partial class Drag : Area2D
 	{
 		if(@event is InputEventMouseButton mouseButton && mouseButton.ButtonIndex == MouseButton.Left)
 		{
-			Hold = mouseButton.Pressed;
+			if (!mouseButton.Pressed)
+			{
+				Hold = false;
+				return;
+			}
+			Array<Area2D> areas = GetOverlappingAreas();
+
+			foreach (Area2D area in areas)
+			{
+				if (area is Drag darea && !darea.MouseOver)
+				{
+					continue;
+				}
+				if(!IsGreaterThan(area) && area.IsVisibleInTree())
+				{
+					return;
+				}
+			}
+
+			Hold = true;
 		}
 	}
+
+
+    public override void _MouseEnter()
+    {
+		MouseOver = true;
+        base._MouseEnter();
+    }
+
+    public override void _MouseExit()
+    {
+		MouseOver = false;
+        base._MouseExit();
+    }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
