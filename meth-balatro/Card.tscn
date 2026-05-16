@@ -29,7 +29,7 @@ shader_parameter/float_speed = 1.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 size = Vector2(13.811165, 18.695599)
 
-[node name="Node2D" type="Control" unique_id=874623318]
+[node name="Card" type="Control" unique_id=874623318]
 z_index = 2
 layout_mode = 3
 anchors_preset = 0
