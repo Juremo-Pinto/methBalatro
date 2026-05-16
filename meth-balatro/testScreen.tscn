@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c635qessa21sa" path="res://Assets/Sprites/HUD/pixil-frame-0(16).png" id="1_2b16w"]
 [ext_resource type="PackedScene" uid="uid://cj6osvkpfwhl" path="res://Card.tscn" id="2_d50wg"]
 
-[node name="Node2D" type="Node2D" unique_id=682869911]
+[node name="Card" type="Node2D" unique_id=682869911]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2081705996]
 
@@ -15,7 +15,7 @@ offset_bottom = 648.0
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Node2D" parent="CanvasLayer" unique_id=1913228894 instance=ExtResource("2_d50wg")]
+[node name="CardO1" parent="CanvasLayer" unique_id=1913228894 instance=ExtResource("2_d50wg")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.24131945
@@ -24,7 +24,7 @@ anchor_right = 0.24131945
 anchor_bottom = 0.89506173
 metadata/_edit_use_anchors_ = true
 
-[node name="Node2D2" parent="CanvasLayer" unique_id=874623318 instance=ExtResource("2_d50wg")]
+[node name="CardO4" parent="CanvasLayer" unique_id=874623318 instance=ExtResource("2_d50wg")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.6970486
@@ -33,7 +33,7 @@ anchor_right = 0.6970486
 anchor_bottom = 0.89969134
 metadata/_edit_use_anchors_ = true
 
-[node name="Node2D3" parent="CanvasLayer" unique_id=1956987471 instance=ExtResource("2_d50wg")]
+[node name="CardO3" parent="CanvasLayer" unique_id=1956987471 instance=ExtResource("2_d50wg")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.5399306
@@ -42,7 +42,7 @@ anchor_right = 0.5399306
 anchor_bottom = 0.8935185
 metadata/_edit_use_anchors_ = true
 
-[node name="Node2D4" parent="CanvasLayer" unique_id=332989372 instance=ExtResource("2_d50wg")]
+[node name="CardO2" parent="CanvasLayer" unique_id=332989372 instance=ExtResource("2_d50wg")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.39322916
@@ -51,7 +51,7 @@ anchor_right = 0.39322916
 anchor_bottom = 0.8888889
 metadata/_edit_use_anchors_ = true
 
-[node name="Node2D5" parent="CanvasLayer" unique_id=427854329 instance=ExtResource("2_d50wg")]
+[node name="CardN1" parent="CanvasLayer" unique_id=427854329 instance=ExtResource("2_d50wg")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.09548611
@@ -61,7 +61,7 @@ anchor_bottom = 0.15432099
 varNonOp = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Node2D6" parent="CanvasLayer" unique_id=1125999039 instance=ExtResource("2_d50wg")]
+[node name="CardN4" parent="CanvasLayer" unique_id=1125999039 instance=ExtResource("2_d50wg")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.10069445
@@ -71,23 +71,23 @@ anchor_bottom = 0.6743827
 varNonOp = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Node2D7" parent="CanvasLayer" unique_id=1868754310 instance=ExtResource("2_d50wg")]
-top_level = true
-anchors_preset = -1
-anchor_left = 0.09201389
-anchor_top = 0.49845678
-anchor_right = 0.09201389
-anchor_bottom = 0.49845678
-varNonOp = true
-metadata/_edit_use_anchors_ = true
-
-[node name="Node2D8" parent="CanvasLayer" unique_id=538861363 instance=ExtResource("2_d50wg")]
+[node name="CardN2" parent="CanvasLayer" unique_id=538861363 instance=ExtResource("2_d50wg")]
 top_level = true
 anchors_preset = -1
 anchor_left = 0.112847224
 anchor_top = 0.33024693
 anchor_right = 0.112847224
 anchor_bottom = 0.33024693
+varNonOp = true
+metadata/_edit_use_anchors_ = true
+
+[node name="CardN3" parent="CanvasLayer" unique_id=1868754310 instance=ExtResource("2_d50wg")]
+top_level = true
+anchors_preset = -1
+anchor_left = 0.09201389
+anchor_top = 0.49845678
+anchor_right = 0.09201389
+anchor_bottom = 0.49845678
 varNonOp = true
 metadata/_edit_use_anchors_ = true
 
