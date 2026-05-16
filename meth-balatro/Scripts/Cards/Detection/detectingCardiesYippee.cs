@@ -99,13 +99,6 @@ public partial class detectingCardiesYippee : Area2D
 
 		string[] operators = { "+", "-", "*", "/", "^" };
 
-		// não pode começar ou terminar com operador
-		if (operators.Contains(tokens[0]) || operators.Contains(tokens[^1]))
-		{
-			GD.PrintErr("Expressão começa ou termina com operador.");
-			return false;
-		}
-
 		for (int i = 0; i < tokens.Count - 1; i++)
 		{
 			bool currentIsNumber = double.TryParse(tokens[i], out _);

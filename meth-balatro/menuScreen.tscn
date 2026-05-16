@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bis4spib7677g"]
+
+[ext_resource type="Texture2D" uid="uid://ce1v3j68is5gu" path="res://Assets/Sprites/HUD/esc.png" id="1_xdn2l"]
+[ext_resource type="Script" path="res://menuScreenControls.cs" id="2_o4jle"]
+
+[node name="Control" type="Control" unique_id=582555513]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=747563749]
+z_index = 5
+layout_mode = 0
+offset_left = 423.0
+offset_top = 78.0
+offset_right = 743.0
+offset_bottom = 558.0
+texture = ExtResource("1_xdn2l")
+
+[node name="Button" type="Button" parent="TextureRect" unique_id=476072179]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 89.0
+offset_right = 260.0
+offset_bottom = 161.0
+flat = true
+script = ExtResource("2_o4jle")
+
+[node name="Button2" type="Button" parent="TextureRect" unique_id=1470252744]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 231.0
+offset_right = 262.0
+offset_bottom = 377.0
+flat = true
+script = ExtResource("2_o4jle")
+isCloseButton = true

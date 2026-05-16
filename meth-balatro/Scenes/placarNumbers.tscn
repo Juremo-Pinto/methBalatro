@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://m0fsf1lkt66y"]
+
+[ext_resource type="Texture2D" uid="uid://0fv42v0c0j50" path="res://Assets/Sprites/Cards/Num/tile0.png" id="1_ef4ov"]
+[ext_resource type="Script" uid="uid://c7utxr0mloy6j" path="res://placarPontos.cs" id="2_p6vlb"]
+[ext_resource type="Texture2D" uid="uid://dg47vvjyo6232" path="res://Assets/Sprites/Cards/Num/tile1.png" id="3_nu5f7"]
+[ext_resource type="Texture2D" uid="uid://cbfkomx6lxvd7" path="res://Assets/Sprites/Cards/Num/tile2.png" id="4_t2tfe"]
+[ext_resource type="Texture2D" uid="uid://b4spogf821o1a" path="res://Assets/Sprites/Cards/Num/tile3.png" id="5_yy3kk"]
+[ext_resource type="Texture2D" uid="uid://b0tdl3ubkod8u" path="res://Assets/Sprites/Cards/Num/tile4.png" id="6_gkq8i"]
+[ext_resource type="Texture2D" uid="uid://cyce82cf28yg2" path="res://Assets/Sprites/Cards/Num/tile5.png" id="7_qnp1s"]
+[ext_resource type="Texture2D" uid="uid://bkqrcgsiq07ot" path="res://Assets/Sprites/Cards/Num/tile6.png" id="8_8mug0"]
+[ext_resource type="Texture2D" uid="uid://0laj3adv21m4" path="res://Assets/Sprites/Cards/Num/tile7.png" id="9_o4gvp"]
+[ext_resource type="Texture2D" uid="uid://c5igu5sr5up8b" path="res://Assets/Sprites/Cards/Num/tile8.png" id="10_beqc2"]
+[ext_resource type="Texture2D" uid="uid://d0k13e6jt0uu7" path="res://Assets/Sprites/Cards/Num/tile9.png" id="11_ygrys"]
+[ext_resource type="Texture2D" uid="uid://bfb6d52diwopa" path="res://Assets/Sprites/Cards/Ops/pixil-frame-0(2).png" id="12_nu5f7"]
+[ext_resource type="Texture2D" uid="uid://c4hsmopj2fogm" path="res://Assets/Sprites/Cards/Ops/pixil-frame-0(1).png" id="13_nrpjw"]
+
+[node name="Placar" type="Sprite2D" unique_id=839575889]
+modulate = Color(1, 0, 1, 1)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("1_ef4ov")
+script = ExtResource("2_p6vlb")
+valNumerosText = Array[Texture2D]([ExtResource("1_ef4ov"), ExtResource("3_nu5f7"), ExtResource("4_t2tfe"), ExtResource("5_yy3kk"), ExtResource("6_gkq8i"), ExtResource("7_qnp1s"), ExtResource("8_8mug0"), ExtResource("9_o4gvp"), ExtResource("10_beqc2"), ExtResource("11_ygrys")])
+valOpText = Array[Texture2D]([ExtResource("12_nu5f7"), ExtResource("13_nrpjw")])

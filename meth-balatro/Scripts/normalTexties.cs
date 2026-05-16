@@ -6,13 +6,7 @@ public partial class normalTexties : Sprite2D
 	[Export]
 	public Texture2D[] valNumerosText;
 	[Export]
-	public bool placarPontos;
-	[Export]
-	public bool placarAtual;
-	[Export]
 	public bool placarTentativas;
-	[Export]
-	public int intPos; // 0, 1 ou 2
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
