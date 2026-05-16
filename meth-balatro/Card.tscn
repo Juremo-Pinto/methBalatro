@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://cxn8i534f325m"]
+[gd_scene format=3 uid="uid://cj6osvkpfwhl"]
 
 [ext_resource type="Script" uid="uid://dcfxm3hh56100" path="res://cardGenType.cs" id="1_getpj"]
 [ext_resource type="Script" uid="uid://by7c0bdi2lo6b" path="res://Drag.cs" id="2_0xm2m"]
-[ext_resource type="Shader" uid="uid://coqhkbswe4pxr" path="res://floatyThingie.gdshader" id="2_s2k0k"]
+[ext_resource type="Shader" path="res://floatyThingie.gdshader" id="2_s2k0k"]
 [ext_resource type="Script" uid="uid://brd5wqcqpn4oo" path="res://RandomCardGen.cs" id="3_ryguw"]
 [ext_resource type="Texture2D" uid="uid://bf87dja72ompf" path="res://Assets/Sprites/Cards/Ops/opDiv.png" id="4_d13ii"]
 [ext_resource type="Texture2D" uid="uid://kpx8hs63g45f" path="res://Assets/Sprites/Cards/Ops/opElev.png" id="5_1u8w0"]
@@ -36,7 +36,7 @@ shader_parameter/float_speed = 1.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 size = Vector2(13.811165, 18.695599)
 
-[node name="Node2D" type="Control" unique_id=874623318]
+[node name="Card" type="Control" unique_id=874623318]
 z_index = 2
 layout_mode = 3
 anchors_preset = 0
@@ -58,6 +58,7 @@ collision_layer = 3
 script = ExtResource("2_0xm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1758491384]
+visible = false
 position = Vector2(-2.148235e-06, 2.3255885)
 scale = Vector2(27.615005, 27.615005)
 shape = SubResource("RectangleShape2D_h2yge")
