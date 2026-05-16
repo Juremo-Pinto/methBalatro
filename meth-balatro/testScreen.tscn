@@ -109,11 +109,9 @@ anchor_bottom = 1.0307778
 offset_left = -0.010425568
 offset_right = 1.989624
 offset_bottom = 0.05596924
-texture = ExtResource("1_2b16w")
 texture = ExtResource("2_kt8ro")
 expand_mode = 2
 metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer/TextureRect" unique_id=118897601]
 z_index = -1
