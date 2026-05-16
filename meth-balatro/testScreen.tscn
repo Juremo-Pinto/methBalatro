@@ -24,6 +24,9 @@ shader = ExtResource("7_7plli")
 shader_parameter/shift_amount = 10.0
 shader_parameter/float_speed = 3.0
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xgnp8"]
+b = Vector2(-1, 200)
+
 [node name="Root" type="Node2D" unique_id=682869911]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2081705996]
@@ -210,3 +213,15 @@ texture = ExtResource("5_xgnp8")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
+
+[node name="SweepDetectionStart" type="Node2D" parent="CanvasLayer" unique_id=1710076097]
+position = Vector2(201, 349)
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/SweepDetectionStart" unique_id=2833140]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/SweepDetectionStart/Area2D" unique_id=814949299]
+position = Vector2(4, -104)
+shape = SubResource("SegmentShape2D_xgnp8")
+
+[node name="DetectionEnd" type="Node2D" parent="CanvasLayer/SweepDetectionStart" unique_id=120628837]
+position = Vector2(670, -2)
