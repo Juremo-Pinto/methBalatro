@@ -15,6 +15,16 @@ public partial class cardGenType : Control
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		MathEventBus.Instance.MathSuccess += OnMathSuccess;
+		Initialize();
+	}
+	private void OnMathSuccess(string a)
+	{
+		Initialize();
+	}
+	
+	public void Initialize()
+	{
 		_rng.Randomize();
 
 		if (varNum)

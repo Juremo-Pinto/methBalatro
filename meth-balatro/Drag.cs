@@ -7,6 +7,7 @@ public partial class Drag : Area2D
 	private Vector2 OriginalPos;
 	private Vector2 TargetPos;
 	private bool Hold;
+	private bool resetting = false;
 	public bool MouseOver = false;
 
 	private Sprite2D sprite;
@@ -16,10 +17,21 @@ public partial class Drag : Area2D
 	public override void _Ready()
 	{
 		sprite = GetNode<Sprite2D>("../Sprite");
-		OriginalPos = sprite.Position;
+		MathEventBus.Instance.MathError += OnMathError;
+		MathEventBus.Instance.MathSuccess += OnMathSuccess;
+		OriginalPos = sprite.GlobalPosition;
 		TargetPos = OriginalPos;
 
 		InputEvent += OnMouseInput;
+	}
+	private void OnMathSuccess(string result)
+	{
+		resetting = true;
+	}
+
+	private void OnMathError()
+	{
+		resetting = true;
 	}
 
 	private void OnMouseInput(Node viewport, InputEvent @event, long shapeIdx)
@@ -65,11 +77,26 @@ public partial class Drag : Area2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if (Hold)
+		if (resetting)
+		{
+			sprite.GlobalPosition = sprite.GlobalPosition.Slerp(OriginalPos, 0.14f);
+
+			if (sprite.GlobalPosition.DistanceTo(OriginalPos) < 1f)
+			{
+				resetting = false;
+				GlobalPosition = OriginalPos;
+			}
+
+			return;
+		}
+		else
+		{
+			if (Hold)
 		{
 			GlobalPosition = GetViewport().GetMousePosition();
 		}
 
-		sprite.GlobalPosition = sprite.GlobalPosition.Slerp(GlobalPosition, .14f);
+		sprite.GlobalPosition = sprite.GlobalPosition.Slerp(GlobalPosition, 0.14f);
+		}
 	}
 }
