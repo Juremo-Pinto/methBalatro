@@ -27,40 +27,25 @@ public partial class detectingCardiesYippee : Area2D
 
 		foreach (Node2D card in sortedCards)
 		{
-			var cardValue = card.GetParent<cardGenType>();
+			var cardValue = card.GetParent<GeneratorBase>();
 
-			if (cardValue.varNum)
+			if (cardValue is NumberGen)
 			{
-				cardList.Add(Convert.ToString(cardValue.valCardNum));
+				cardList.Add(Convert.ToString(cardValue.ValCard));
 			}
-			else if (cardValue.varOp)
+			else if (cardValue is OperatorGen op)
 			{
-				switch (cardValue.valCardOp)
+				cardList.Add(op.OperatorValue switch
 				{
-					case 0:
-						cardList.Add("/");
-						break;
+					Operators.Division => "/",
+					Operators.Power => "^",
+					Operators.Subtraction => "-",
+					Operators.Multiplication => "*",
+					Operators.Addition => "+",
+					Operators.SquareRoot => "√",
 
-					case 1:
-						cardList.Add("^");
-						break;
-
-					case 2:
-						cardList.Add("-");
-						break;
-
-					case 3:
-						cardList.Add("*");
-						break;
-
-					case 4:
-						cardList.Add("+");
-						break;
-
-					case 5:
-						cardList.Add("√");
-						break;
-				}
+					_ => throw new ArgumentOutOfRangeException()
+				});
 			}
 		}
 

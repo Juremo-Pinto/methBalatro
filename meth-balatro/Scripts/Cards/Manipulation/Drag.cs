@@ -36,7 +36,7 @@ public partial class Drag : Area2D
 
 	private void OnMouseInput(Node viewport, InputEvent @event, long shapeIdx)
 	{
-		if(@event is InputEventMouseButton mouseButton && mouseButton.ButtonIndex == MouseButton.Left)
+		if (@event is InputEventMouseButton mouseButton && mouseButton.ButtonIndex == MouseButton.Left)
 		{
 			if (!mouseButton.Pressed)
 			{
@@ -51,7 +51,7 @@ public partial class Drag : Area2D
 				{
 					continue;
 				}
-				if(!IsGreaterThan(area) && area.IsVisibleInTree())
+				if (!IsGreaterThan(area) && area.IsVisibleInTree())
 				{
 					return;
 				}
@@ -62,41 +62,33 @@ public partial class Drag : Area2D
 	}
 
 
-    public override void _MouseEnter()
-    {
+	public override void _MouseEnter()
+	{
 		MouseOver = true;
-        base._MouseEnter();
-    }
+		base._MouseEnter();
+	}
 
-    public override void _MouseExit()
-    {
+	public override void _MouseExit()
+	{
 		MouseOver = false;
-        base._MouseExit();
-    }
+		base._MouseExit();
+	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 		if (resetting)
 		{
-			sprite.GlobalPosition = sprite.GlobalPosition.Slerp(OriginalPos, 0.14f);
+			GlobalPosition = OriginalPos;
 
 			if (sprite.GlobalPosition.DistanceTo(OriginalPos) < 1f)
-			{
 				resetting = false;
-				GlobalPosition = OriginalPos;
-			}
-
-			return;
 		}
-		else
-		{
-			if (Hold)
+		else if (Hold)
 		{
 			GlobalPosition = GetViewport().GetMousePosition();
 		}
 
 		sprite.GlobalPosition = sprite.GlobalPosition.Slerp(GlobalPosition, 0.14f);
-		}
 	}
 }
