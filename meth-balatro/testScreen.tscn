@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://li8q2g1dch6a"]
 
 [ext_resource type="Texture2D" uid="uid://c635qessa21sa" path="res://Assets/Sprites/HUD/pixil-frame-0(16).png" id="1_2b16w"]
-[ext_resource type="PackedScene" uid="uid://cj6osvkpfwhl" path="res://main.tscn" id="2_d50wg"]
+[ext_resource type="PackedScene" uid="uid://cj6osvkpfwhl" path="res://Card.tscn" id="2_d50wg"]
 
 [node name="Node2D" type="Node2D" unique_id=682869911]
 
