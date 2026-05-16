@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b76ng61nhxenp" path="res://Assets/Sprites/Cards/DepthBorders/SideBorderNumber.png" id="12_wn26v"]
 [ext_resource type="Texture2D" uid="uid://cyce82cf28yg2" path="res://Assets/Sprites/Cards/Num/tile5.png" id="13_cmrup"]
 [ext_resource type="Script" uid="uid://bre236e8uivgt" path="res://Scripts/Cards/Detection/detectingCardiesYippee.cs" id="14_im1vy"]
-[ext_resource type="Script" uid="uid://b11nho4bgs00l" path="res://Scripts/MathEventBus.cs" id="15_yy0n7"]
+[ext_resource type="Script" uid="uid://b11nho4bgs00l" path="res://Scripts/Events/MathEventBus.cs" id="15_yy0n7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r6yns"]
 shader = ExtResource("3_r5sjn")
