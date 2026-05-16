@@ -1,14 +1,28 @@
 [gd_scene format=3 uid="uid://cj6osvkpfwhl"]
 
+[ext_resource type="Texture2D" uid="uid://b44kmv3iqdk65" path="res://1d400e79e924b844848049f3e52172b2.jpg" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cv6woxtkhvnrj" path="res://Spritescript.cs" id="1_ig7tw"]
-
-[sub_resource type="ImageTexture" id="ImageTexture_0xm2m"]
 
 [node name="Node2D" type="Node2D" unique_id=1913228894]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=670839959]
-scale = Vector2(3, 6)
-texture = SubResource("ImageTexture_0xm2m")
-script = ExtResource("1_ig7tw")
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2057351637]
+position = Vector2(-11, 4.9999847)
+scale = Vector2(2.9999235, 2.8255787)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=526358581]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=209431728]
+offset_left = -587.0
+offset_top = -318.00006
+offset_right = 742.0
+offset_bottom = 186.99994
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1355407516]
+disable_3d = true
+handle_input_locally = false
+size = Vector2i(1155, 644)
+render_target_update_mode = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/SubViewport" unique_id=670839959]
+position = Vector2(531, 298)
+scale = Vector2(0.41607377, 0.3729889)
+texture = ExtResource("1_0xm2m")
+script = ExtResource("1_ig7tw")
