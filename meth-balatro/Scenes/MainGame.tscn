@@ -225,7 +225,7 @@ metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/TextureRect" unique_id=1926853413]
-z_index = -1
+z_index = -2
 material = SubResource("ShaderMaterial_r6yns")
 layout_mode = 0
 offset_right = 1153.0
@@ -238,7 +238,7 @@ metadata/_edit_lock_ = true
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer/TextureRect" unique_id=1325118858]
 modulate = Color(3.851815, 3.851815, 3.851815, 0.57254905)
-z_index = -1
+z_index = -2
 material = SubResource("ShaderMaterial_44i4l")
 layout_mode = 0
 offset_right = 1153.0
@@ -251,7 +251,7 @@ metadata/_edit_lock_ = true
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer/TextureRect" unique_id=1413954461]
 modulate = Color(1, 1, 1, 0.6392157)
-z_index = -1
+z_index = -2
 material = SubResource("ShaderMaterial_2e8dp")
 layout_mode = 0
 offset_right = 1153.0
@@ -304,6 +304,7 @@ position = Vector2(292, 95)
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=2001334555]
 modulate = Color(1, 1, 0.48235294, 1)
+z_index = 1
 offset_left = 345.0
 offset_top = 46.0
 offset_right = 443.0
