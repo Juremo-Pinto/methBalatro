@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://d0k13e6jt0uu7" path="res://Assets/Sprites/Cards/Num/tile9.png" id="19_b1qrp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(13.811165, 18.695599)
 
 [node name="Node2D" type="Control" unique_id=874623318]
 z_index = 2
@@ -41,5 +42,6 @@ scale = Vector2(0.215, 0.215)
 script = ExtResource("2_0xm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1758491384]
-scale = Vector2(27.615, 27.615)
+position = Vector2(-2.148235e-06, 2.3255885)
+scale = Vector2(27.615005, 27.615005)
 shape = SubResource("RectangleShape2D_h2yge")
