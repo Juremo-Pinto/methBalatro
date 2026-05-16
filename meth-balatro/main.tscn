@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b44kmv3iqdk65" path="res://1d400e79e924b844848049f3e52172b2.jpg" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://by7c0bdi2lo6b" path="res://Drag.cs" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://b6mnv2pyo8xsy" path="res://aa97f2eda8896287973d0a9b7e22fa59.jpg" id="3_h2yge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 
@@ -24,14 +25,21 @@ physics_object_picking = true
 size = Vector2i(1155, 644)
 render_target_update_mode = 4
 
-[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/SubViewport" unique_id=670839959]
-position = Vector2(309, 527.0001)
-scale = Vector2(0.21464542, 0.19720846)
+[node name="Node2D" type="Node2D" parent="SubViewportContainer/SubViewport" unique_id=1939145603]
+position = Vector2(454, 319.00006)
+scale = Vector2(0.215, 0.215)
+
+[node name="Sprite" type="Sprite2D" parent="SubViewportContainer/SubViewport/Node2D" unique_id=670839959]
 texture = ExtResource("1_0xm2m")
 
-[node name="Area2D" type="Area2D" parent="SubViewportContainer/SubViewport/Sprite2D" unique_id=162796849]
+[node name="Area2D" type="Area2D" parent="SubViewportContainer/SubViewport/Node2D" unique_id=162796849]
 script = ExtResource("2_0xm2m")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/Sprite2D/Area2D" unique_id=1758491384]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/Node2D/Area2D" unique_id=1758491384]
 scale = Vector2(27.615, 27.615)
 shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Sprite" type="Sprite2D" parent="SubViewportContainer/SubViewport/Node2D/Area2D" unique_id=269983217]
+position = Vector2(0, -10.141553)
+scale = Vector2(0.3733699, 0.37965456)
+texture = ExtResource("3_h2yge")

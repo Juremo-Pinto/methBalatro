@@ -1,12 +1,12 @@
 using Godot;
 using System;
+using System.Drawing;
 using System.Reflection;
 
 public partial class Drag : Area2D
 {
 	private Vector2 OriginalPos;
 	private Vector2 TargetPos;
-	private Vector2 CurrentPos;
 	private bool Hold;
 
 
@@ -16,13 +16,11 @@ public partial class Drag : Area2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		sprite = GetNode<Sprite2D>("../Sprite");
 		OriginalPos = sprite.Position;
-		CurrentPos = sprite.Position;
 		TargetPos = OriginalPos;
-		InputEvent += OnMouseInput;
 
-		sprite = GetParent<Sprite2D>();
-		GD.Print(sprite);
+		InputEvent += OnMouseInput;
 	}
 
 	private void OnMouseInput(Node viewport, InputEvent @event, long shapeIdx)
@@ -38,9 +36,9 @@ public partial class Drag : Area2D
 	{
 		if (Hold)
 		{
-			CurrentPos = GetViewport().GetMousePosition();
+			GlobalPosition = GetViewport().GetMousePosition();
 		}
 
-		sprite.Position = sprite.Position.Slerp(CurrentPos, .14f);
+		sprite.GlobalPosition = sprite.GlobalPosition.Slerp(GlobalPosition, .14f);
 	}
 }
