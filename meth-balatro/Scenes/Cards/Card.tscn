@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cj6osvkpfwhl"]
 
 [ext_resource type="Script" uid="uid://dcfxm3hh56100" path="res://Scripts/Cards/Generation/cardGenType.cs" id="1_getpj"]
-[ext_resource type="Script" uid="uid://by7c0bdi2lo6b" path="res://Scripts/Cards/Drag.cs" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://by7c0bdi2lo6b" path="res://Scripts/Cards/Manipulation/Drag.cs" id="2_0xm2m"]
 [ext_resource type="Shader" uid="uid://coqhkbswe4pxr" path="res://Shaders/floatyThingie.gdshader" id="2_wlnma"]
 [ext_resource type="Script" uid="uid://brd5wqcqpn4oo" path="res://Scripts/Cards/Generation/RandomCardGen.cs" id="3_ryguw"]
 [ext_resource type="Texture2D" uid="uid://bf87dja72ompf" path="res://Assets/Sprites/Cards/Ops/opDiv.png" id="4_d13ii"]
