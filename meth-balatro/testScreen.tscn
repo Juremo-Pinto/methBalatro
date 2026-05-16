@@ -1,15 +1,28 @@
 [gd_scene format=3 uid="uid://li8q2g1dch6a"]
 
-<<<<<<< Updated upstream
-[ext_resource type="Texture2D" uid="uid://c635qessa21sa" path="res://Assets/Sprites/HUD/pixil-frame-0(16).png" id="1_2b16w"]
-[ext_resource type="PackedScene" uid="uid://cj6osvkpfwhl" path="res://Card.tscn" id="2_d50wg"]
-=======
-[ext_resource type="PackedScene" uid="uid://cj6osvkpfwhl" path="res://main.tscn" id="2_d50wg"]
+[ext_resource type="PackedScene" uid="uid://cxn8i534f325m" path="res://Card.tscn" id="2_d50wg"]
 [ext_resource type="Texture2D" uid="uid://dhbjkr3cd3ir7" path="res://Assets/Sprites/HUD/hud.png" id="2_kt8ro"]
 [ext_resource type="Texture2D" uid="uid://dssk4ivf4knev" path="res://Assets/Sprites/HUD/botUi100.png" id="3_5jv84"]
 [ext_resource type="Texture2D" uid="uid://bgdfx0j27xdj0" path="res://Assets/Sprites/HUD/midUi89.png" id="4_3voo3"]
+[ext_resource type="Shader" uid="uid://b6nnh8pik7js1" path="res://shaderBgBottom.gdshader" id="4_mj4ja"]
+[ext_resource type="Shader" uid="uid://djwxoaguhnkyf" path="res://shaderBgMid.gdshader" id="5_mj4ja"]
 [ext_resource type="Texture2D" uid="uid://dvsf17gfaf1gy" path="res://Assets/Sprites/HUD/topUi72.png" id="5_xgnp8"]
->>>>>>> Stashed changes
+[ext_resource type="Shader" uid="uid://coe86qsnp2m51" path="res://shaderbgTop.gdshader" id="7_7plli"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r6yns"]
+shader = ExtResource("4_mj4ja")
+shader_parameter/shift_amount = 10.0
+shader_parameter/float_speed = 3.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_44i4l"]
+shader = ExtResource("5_mj4ja")
+shader_parameter/shift_amount = 10.0
+shader_parameter/float_speed = 3.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2e8dp"]
+shader = ExtResource("7_7plli")
+shader_parameter/shift_amount = 10.0
+shader_parameter/float_speed = 3.0
 
 [node name="Card" type="Node2D" unique_id=682869911]
 
@@ -30,6 +43,10 @@ anchor_left = 0.24131945
 anchor_top = 0.89506173
 anchor_right = 0.24131945
 anchor_bottom = 0.89506173
+offset_left = -180.0
+offset_top = -475.0
+offset_right = -180.0
+offset_bottom = -475.0
 metadata/_edit_use_anchors_ = true
 
 [node name="CardO4" parent="CanvasLayer" unique_id=874623318 instance=ExtResource("2_d50wg")]
@@ -39,6 +56,10 @@ anchor_left = 0.6970486
 anchor_top = 0.89969134
 anchor_right = 0.6970486
 anchor_bottom = 0.89969134
+offset_left = -704.0
+offset_top = -121.0
+offset_right = -704.0
+offset_bottom = -121.0
 metadata/_edit_use_anchors_ = true
 
 [node name="CardO3" parent="CanvasLayer" unique_id=1956987471 instance=ExtResource("2_d50wg")]
@@ -48,6 +69,10 @@ anchor_left = 0.5399306
 anchor_top = 0.8935185
 anchor_right = 0.5399306
 anchor_bottom = 0.8935185
+offset_left = -523.0
+offset_top = -237.0
+offset_right = -523.0
+offset_bottom = -237.0
 metadata/_edit_use_anchors_ = true
 
 [node name="CardO2" parent="CanvasLayer" unique_id=332989372 instance=ExtResource("2_d50wg")]
@@ -57,6 +82,10 @@ anchor_left = 0.39322916
 anchor_top = 0.8888889
 anchor_right = 0.39322916
 anchor_bottom = 0.8888889
+offset_left = -356.0
+offset_top = -353.0
+offset_right = -356.0
+offset_bottom = -353.0
 metadata/_edit_use_anchors_ = true
 
 [node name="CardN1" parent="CanvasLayer" unique_id=427854329 instance=ExtResource("2_d50wg")]
@@ -66,6 +95,10 @@ anchor_left = 0.09548611
 anchor_top = 0.15432099
 anchor_right = 0.09548611
 anchor_bottom = 0.15432099
+offset_left = 177.0
+offset_top = 475.0
+offset_right = 177.0
+offset_bottom = 475.0
 varNonOp = true
 metadata/_edit_use_anchors_ = true
 
@@ -76,6 +109,24 @@ anchor_left = 0.10069445
 anchor_top = 0.6743827
 anchor_right = 0.10069445
 anchor_bottom = 0.6743827
+offset_left = 552.0
+offset_top = 138.00003
+offset_right = 552.0
+offset_bottom = 138.00003
+varNonOp = true
+metadata/_edit_use_anchors_ = true
+
+[node name="CardN5" parent="CanvasLayer" unique_id=1684986371 instance=ExtResource("2_d50wg")]
+top_level = true
+anchors_preset = -1
+anchor_left = 0.10069445
+anchor_top = 0.6743827
+anchor_right = 0.10069445
+anchor_bottom = 0.6743827
+offset_left = 672.0
+offset_top = 141.00003
+offset_right = 672.0
+offset_bottom = 141.00003
 varNonOp = true
 metadata/_edit_use_anchors_ = true
 
@@ -86,6 +137,10 @@ anchor_left = 0.112847224
 anchor_top = 0.33024693
 anchor_right = 0.112847224
 anchor_bottom = 0.33024693
+offset_left = 293.0
+offset_top = 361.0
+offset_right = 293.0
+offset_bottom = 361.0
 varNonOp = true
 metadata/_edit_use_anchors_ = true
 
@@ -96,6 +151,10 @@ anchor_left = 0.09201389
 anchor_top = 0.49845678
 anchor_right = 0.09201389
 anchor_bottom = 0.49845678
+offset_left = 434.0
+offset_top = 253.0
+offset_right = 434.0
+offset_bottom = 253.0
 varNonOp = true
 metadata/_edit_use_anchors_ = true
 
@@ -106,35 +165,48 @@ anchor_left = 0.010425717
 anchor_top = 0.027777778
 anchor_right = 1.0104257
 anchor_bottom = 1.0307778
-offset_left = -0.010425568
-offset_right = 1.989624
-offset_bottom = 0.05596924
+offset_left = -12.010426
+offset_top = -18.0
+offset_right = -10.010376
+offset_bottom = -17.94403
 texture = ExtResource("2_kt8ro")
 expand_mode = 2
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/TextureRect" unique_id=118897601]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/TextureRect" unique_id=1926853413]
 z_index = -1
+material = SubResource("ShaderMaterial_r6yns")
 layout_mode = 0
 offset_right = 1153.0
-offset_bottom = 647.0
+offset_bottom = 655.0
 texture = ExtResource("3_5jv84")
 expand_mode = 1
+flip_v = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/TextureRect" unique_id=1304226419]
-modulate = Color(4.50329, 4.50329, 4.50329, 0.6745098)
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/TextureRect" unique_id=1325118858]
+modulate = Color(3.851815, 3.851815, 3.851815, 0.57254905)
 z_index = -1
+material = SubResource("ShaderMaterial_44i4l")
 layout_mode = 0
 offset_right = 1153.0
-offset_bottom = 647.0
+offset_bottom = 655.0
 texture = ExtResource("4_3voo3")
 expand_mode = 1
+flip_h = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/TextureRect" unique_id=1514808008]
-modulate = Color(1, 1, 1, 0.6784314)
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/TextureRect" unique_id=1413954461]
+modulate = Color(1, 1, 1, 0.6392157)
 z_index = -1
+material = SubResource("ShaderMaterial_2e8dp")
 layout_mode = 0
 offset_right = 1153.0
-offset_bottom = 647.0
+offset_bottom = 655.0
 texture = ExtResource("5_xgnp8")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
