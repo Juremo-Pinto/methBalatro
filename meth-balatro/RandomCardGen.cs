@@ -14,12 +14,12 @@ public partial class RandomCardGen : Sprite2D
 
 	public void Initialize()
 	{
-		var parentCard = GetParent<cardGenType>();
+		cardGenType parentCard = GetParent<cardGenType>();
 
 		if (parentCard.varNonOp)
 			Texture = textCardsNum[parentCard.valCardNum];
 		else
-			Texture = textCardsOp[parentCard.valCardOp];
+			Texture = textCardsOp[(int)parentCard.valCardOp];
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
