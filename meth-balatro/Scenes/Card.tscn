@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cj6osvkpfwhl"]
 
-[ext_resource type="Script" uid="uid://dcfxm3hh56100" path="res://cardGenType.cs" id="1_getpj"]
-[ext_resource type="Script" uid="uid://by7c0bdi2lo6b" path="res://Drag.cs" id="2_0xm2m"]
-[ext_resource type="Shader" uid="uid://coqhkbswe4pxr" path="res://floatyThingie.gdshader" id="2_wlnma"]
-[ext_resource type="Script" uid="uid://brd5wqcqpn4oo" path="res://RandomCardGen.cs" id="3_ryguw"]
+[ext_resource type="Script" uid="uid://dcfxm3hh56100" path="res://Scripts/cardGenType.cs" id="1_getpj"]
+[ext_resource type="Script" uid="uid://by7c0bdi2lo6b" path="res://Scripts/Drag.cs" id="2_0xm2m"]
+[ext_resource type="Shader" uid="uid://coqhkbswe4pxr" path="res://Shaders/floatyThingie.gdshader" id="2_wlnma"]
+[ext_resource type="Script" uid="uid://brd5wqcqpn4oo" path="res://Scripts/RandomCardGen.cs" id="3_ryguw"]
 [ext_resource type="Texture2D" uid="uid://bf87dja72ompf" path="res://Assets/Sprites/Cards/Ops/opDiv.png" id="4_d13ii"]
 [ext_resource type="Texture2D" uid="uid://kpx8hs63g45f" path="res://Assets/Sprites/Cards/Ops/opElev.png" id="5_1u8w0"]
 [ext_resource type="Texture2D" uid="uid://8yck6ccghjsl" path="res://Assets/Sprites/Cards/Prk/balanceCoin.png" id="5_otofn"]
@@ -32,12 +32,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ri7v3"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_rigy8"]
-shader = ExtResource("2_wlnma")
-shader_parameter/shift_amount = 10.0
-shader_parameter/float_speed = 2.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3huko"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wlnma"]
 shader = ExtResource("2_wlnma")
 shader_parameter/shift_amount = 10.0
 shader_parameter/float_speed = 2.0
@@ -54,9 +49,9 @@ script = ExtResource("1_getpj")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=670839959]
 z_index = 1
-material = SubResource("ShaderMaterial_rigy8")
-position = Vector2(4.75, -4.75)
-scale = Vector2(0.04, 0.04)
+material = SubResource("ShaderMaterial_wlnma")
+position = Vector2(4.7500005, -4.7500005)
+scale = Vector2(0.040000003, 0.040000003)
 texture = ExtResource("10_qsp4k")
 region_enabled = true
 region_rect = Rect2(240.01688, 0, 1799.9832, 2519.995)
@@ -67,7 +62,7 @@ textCardsNum = Array[Texture2D]([ExtResource("10_qsp4k"), ExtResource("11_kq58d"
 
 [node name="Sprite2" type="Sprite2D" parent="Sprite" unique_id=835732954]
 z_index = -1
-material = SubResource("ShaderMaterial_3huko")
+use_parent_material = true
 position = Vector2(-118.75, 118.75)
 scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("20_k5rk8")
@@ -77,7 +72,7 @@ textCardsNum = Array[Texture2D]([ExtResource("10_qsp4k"), ExtResource("11_kq58d"
 
 [node name="Sprite3" type="Sprite2D" parent="Sprite" unique_id=229414987]
 z_index = -2
-material = SubResource("ShaderMaterial_3huko")
+use_parent_material = true
 position = Vector2(-118.75, 118.75)
 scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("21_gr8ir")
