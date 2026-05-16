@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b76ng61nhxenp"
-path="res://.godot/imported/SideBorderNumber.png-aa783160b63c080d233ef02c60466f5e.ctex"
+uid="uid://dld0apx83rbxc"
+path="res://.godot/imported/OpBottomBorder.png-1779b92c2aa67c55f9ae9be5a96e5e58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Cards/DepthBorders/SideBorderNumber.png"
-dest_files=["res://.godot/imported/SideBorderNumber.png-aa783160b63c080d233ef02c60466f5e.ctex"]
+source_file="res://Assets/Sprites/Cards/DepthBorders/OpBottomBorder.png"
+dest_files=["res://.godot/imported/OpBottomBorder.png-1779b92c2aa67c55f9ae9be5a96e5e58.ctex"]
 
 [params]
 

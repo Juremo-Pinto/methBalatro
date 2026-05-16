@@ -27,8 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://0laj3adv21m4" path="res://Assets/Sprites/Cards/Num/tile7.png" id="17_ok6jj"]
 [ext_resource type="Texture2D" uid="uid://c5igu5sr5up8b" path="res://Assets/Sprites/Cards/Num/tile8.png" id="18_facbu"]
 [ext_resource type="Texture2D" uid="uid://d0k13e6jt0uu7" path="res://Assets/Sprites/Cards/Num/tile9.png" id="19_b1qrp"]
-[ext_resource type="Texture2D" uid="uid://df1h1xxir8fj1" path="res://Assets/Sprites/Cards/DepthBorders/BottomBorderNumber.png" id="20_k5rk8"]
-[ext_resource type="Texture2D" uid="uid://b76ng61nhxenp" path="res://Assets/Sprites/Cards/DepthBorders/SideBorderNumber.png" id="21_gr8ir"]
+[ext_resource type="Texture2D" uid="uid://df1h1xxir8fj1" path="res://Assets/Sprites/Cards/DepthBorders/NumberBottomBorder.png" id="20_k5rk8"]
+[ext_resource type="Texture2D" uid="uid://b76ng61nhxenp" path="res://Assets/Sprites/Cards/DepthBorders/NumberSideBorder.png" id="21_gr8ir"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ri7v3"]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df1h1xxir8fj1"
-path="res://.godot/imported/BottomBorderNumber.png-8741f7c2f8a3c376c00b1c1ee22dd81c.ctex"
+uid="uid://bfuo2qdtnabkn"
+path="res://.godot/imported/PerkBottomBorder.png-f5ada64502eb05aec0d2f24b60cbda1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Cards/DepthBorders/BottomBorderNumber.png"
-dest_files=["res://.godot/imported/BottomBorderNumber.png-8741f7c2f8a3c376c00b1c1ee22dd81c.ctex"]
+source_file="res://Assets/Sprites/Cards/DepthBorders/PerkBottomBorder.png"
+dest_files=["res://.godot/imported/PerkBottomBorder.png-f5ada64502eb05aec0d2f24b60cbda1e.ctex"]
 
 [params]
 

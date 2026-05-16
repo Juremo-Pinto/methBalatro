@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://y7hpdtv0lqci" path="res://Scripts/Menu/openMenuClick.cs" id="9_7p2u3"]
 [ext_resource type="PackedScene" uid="uid://co78hor07ul5a" path="res://Scenes/menuScreen.tscn" id="10_him8o"]
 [ext_resource type="PackedScene" uid="uid://vmvrkch1qksg" path="res://Scenes/textiesThingies.tscn" id="11_fgk2h"]
-[ext_resource type="Texture2D" uid="uid://b76ng61nhxenp" path="res://Assets/Sprites/Cards/DepthBorders/SideBorderNumber.png" id="12_wn26v"]
+[ext_resource type="Texture2D" uid="uid://b76ng61nhxenp" path="res://Assets/Sprites/Cards/DepthBorders/NumberSideBorder.png" id="12_wn26v"]
 [ext_resource type="Texture2D" uid="uid://cyce82cf28yg2" path="res://Assets/Sprites/Cards/Num/tile5.png" id="13_cmrup"]
 [ext_resource type="Script" uid="uid://bre236e8uivgt" path="res://Scripts/Cards/Detection/detectingCardiesYippee.cs" id="14_im1vy"]
 [ext_resource type="Script" uid="uid://b11nho4bgs00l" path="res://Scripts/Events/MathEventBus.cs" id="15_yy0n7"]
