@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkt61ylfa51ga"
-path="res://.godot/imported/differentlyOdd.png-8cd9089897bab26bead71e3758469096.ctex"
+uid="uid://dtakm240hnyaq"
+path="res://.godot/imported/mult.png-5047b847fb30681f32282d71d1d255c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Cards/Prk/differentlyOdd.png"
-dest_files=["res://.godot/imported/differentlyOdd.png-8cd9089897bab26bead71e3758469096.ctex"]
+source_file="res://Assets/Sprites/Cards/Prk/mult.png"
+dest_files=["res://.godot/imported/mult.png-5047b847fb30681f32282d71d1d255c6.ctex"]
 
 [params]
 

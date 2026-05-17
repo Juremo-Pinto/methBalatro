@@ -19,6 +19,8 @@ public partial class Drag : Area2D
 		sprite = GetNode<Sprite2D>("../Sprite");
 		MathEventBus.Instance.MathError += OnMathError;
 		MathEventBus.Instance.MathSuccess += OnMathSuccess;
+		MathEventBus.Instance.LostGame += onGameLost;
+		MathEventBus.Instance.WonGame += onGameWon;
 		OriginalPos = sprite.GlobalPosition;
 		TargetPos = OriginalPos;
 
@@ -30,6 +32,14 @@ public partial class Drag : Area2D
 	}
 
 	private void OnMathError()
+	{
+		resetting = true;
+	}
+	private void onGameLost()
+	{
+		resetting = true;
+	}
+	private void onGameWon()
 	{
 		resetting = true;
 	}

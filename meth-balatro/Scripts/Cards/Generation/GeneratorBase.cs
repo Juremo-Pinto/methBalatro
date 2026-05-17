@@ -13,9 +13,19 @@ public partial class GeneratorBase : Node
 	protected void OnReady()
 	{
 		MathEventBus.Instance.MathSuccess += OnMathSuccess;
+		MathEventBus.Instance.LostGame += onGameLost;
+		MathEventBus.Instance.WonGame += onGameWon;
 		Initialize();
 	}
 	private void OnMathSuccess(string a)
+	{
+		Initialize();
+	}
+	private void onGameLost()
+	{
+		Initialize();
+	}
+	private void onGameWon()
 	{
 		Initialize();
 	}

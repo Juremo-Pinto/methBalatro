@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://33ogvt8cqv5n"
-path="res://.godot/imported/inateSum.png-d3666db3a1da6903b8dcd6aa3f3de582.ctex"
+uid="uid://b6ga4vbiioim0"
+path="res://.godot/imported/div.png-da14cafa4a02b0f7e0bb429a987c3a59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Cards/Prk/inateSum.png"
-dest_files=["res://.godot/imported/inateSum.png-d3666db3a1da6903b8dcd6aa3f3de582.ctex"]
+source_file="res://Assets/Sprites/Cards/Prk/div.png"
+dest_files=["res://.godot/imported/div.png-da14cafa4a02b0f7e0bb429a987c3a59.ctex"]
 
 [params]
 

@@ -13,12 +13,24 @@ public partial class normalTexties : Sprite2D
 	{
 		MathEventBus.Instance.MathSuccess += OnMathSuccess;
 		MathEventBus.Instance.MathError += OnMathFail;
+		MathEventBus.Instance.LostGame += onGameLost;
+		MathEventBus.Instance.WonGame += onGameWon;
 
 		if(placarTentativas)
 		Texture = valNumerosText[0];
 	}
 
 	private void OnMathSuccess(string resultado)
+	{
+		if(placarTentativas)
+		Texture = valNumerosText[MathEventBus.Instance.numTentativas];
+	}
+	private void onGameLost()
+	{
+		if(placarTentativas)
+		Texture = valNumerosText[MathEventBus.Instance.numTentativas];
+	}
+	private void onGameWon()
 	{
 		if(placarTentativas)
 		Texture = valNumerosText[MathEventBus.Instance.numTentativas];

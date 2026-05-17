@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p06n3vak7ue1"
-path="res://.godot/imported/divideTalisman.png-d6b024b0d28065638b5a078885982199.ctex"
+uid="uid://bupqrts0h1b7w"
+path="res://.godot/imported/impar.png-2215c43535f4f21abd0de7370dfd1699.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Cards/Prk/divideTalisman.png"
-dest_files=["res://.godot/imported/divideTalisman.png-d6b024b0d28065638b5a078885982199.ctex"]
+source_file="res://Assets/Sprites/Cards/Prk/impar.png"
+dest_files=["res://.godot/imported/impar.png-2215c43535f4f21abd0de7370dfd1699.ctex"]
 
 [params]
 

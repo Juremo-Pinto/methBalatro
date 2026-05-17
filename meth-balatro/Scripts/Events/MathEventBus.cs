@@ -5,13 +5,17 @@ public partial class MathEventBus : Node
 {
 	public static MathEventBus Instance { get; private set; }
 
-	[Signal]
-	public delegate void MathErrorEventHandler();
+	[Signal] public delegate void MathErrorEventHandler();
+	[Signal] public delegate void LostGameEventHandler();
+	[Signal] public delegate void WonGameEventHandler();
+	[Signal] public delegate void MathSuccessEventHandler(string result);
 
-	[Signal]
-	public delegate void MathSuccessEventHandler(string result);
-	public int numTentativas {get; private set;} = 1;
-	public string[] numAlvo {get; private set;}
+	public int numTentativas { get; private set; } = 0;
+	public int valRodada { get; private set; } = 1;
+
+	public string[] numAlvo { get; private set; }
+	public string[] numAtual { get; private set; }
+
 	private RandomNumberGenerator _rng = new RandomNumberGenerator();
 
 	public override void _EnterTree()
@@ -23,6 +27,8 @@ public partial class MathEventBus : Node
 		}
 
 		Instance = this;
+
+		ResetAtual();
 		gerarNumeroAlvo();
 	}
 
@@ -32,38 +38,127 @@ public partial class MathEventBus : Node
 			Instance = null;
 	}
 
+	public void ResetAtual()
+	{
+		numAtual = new string[4];
+		for (int i = 0; i < 4; i++)
+			numAtual[i] = "0";
+	}
+
 	public void EmitError()
 	{
 		EmitSignal(SignalName.MathError);
 	}
 
+	public void GameLost()
+	{
+		numTentativas = 0;
+		valRodada = 1;
+		ResetAtual();
+		gerarNumeroAlvo();
+		EmitSignal(SignalName.LostGame);
+	}
+
+	public void GameWon()
+	{
+		numTentativas = 0;
+		valRodada++;
+		ResetAtual();
+		gerarNumeroAlvo();
+		EmitSignal(SignalName.WonGame);
+	}
+
 	public void EmitSuccess(string result)
 	{
-		EmitSignal(SignalName.MathSuccess, result);
 		numTentativas++;
+
+		if (numTentativas > 5)
+		{
+			GameLost();
+			return;
+		}
+
+		UpdateAtual(result);
+		EmitSignal(SignalName.MathSuccess, result);
+
+		CheckWin();
 	}
+
+	private void UpdateAtual(string resultado)
+	{
+		string atualTexto = string.Join("", numAtual);
+
+		if (atualTexto.StartsWith(","))
+			atualTexto = "0" + atualTexto;
+
+		atualTexto = atualTexto.Replace(",", ".");
+
+		double atual = Convert.ToDouble(atualTexto);
+		double novoValor = Convert.ToDouble(resultado);
+
+		double soma = atual + novoValor;
+
+		double valor = Math.Floor(soma * 1000) / 1000;
+
+		string texto = valor.ToString("0.###");
+
+		texto = texto.Replace(".", ",");
+
+		if (texto.StartsWith("0,"))
+			texto = texto.Substring(1);
+
+		string[] novo = new string[4];
+
+		int j = texto.Length - 1;
+
+		for (int i = 3; i >= 0; i--)
+		{
+			if (j >= 0)
+			{
+				novo[i] = texto[j].ToString();
+				j--;
+			}
+			else
+			{
+				novo[i] = "0";
+			}
+		}
+
+		numAtual = novo;
+	}
+
+	private void CheckWin()
+	{
+		string atual = string.Join("", numAtual);
+		string alvo = string.Join("", numAlvo);
+
+		if (atual == alvo)
+			GameWon();
+	}
+
 	public void gerarNumeroAlvo()
 	{
 		_rng.Randomize();
-		bool operadorGerado = false;
+
 		numAlvo = new string[4];
-		for(int bananas = 0; bananas < 4; bananas++)
+		bool operadorGerado = false;
+
+		for (int i = 0; i < 4; i++)
 		{
-			if(bananas != 3 && !operadorGerado)
+			if (i != 3 && !operadorGerado)
 			{
-				int opChance = _rng.RandiRange(1,100);
-				if(opChance <= 25){
-					int opGerado = _rng.RandiRange(0,1); // 0 = Virgula, 1 = Raiz
-					if(opGerado == 0)
-						numAlvo[bananas] = "√";
-					else
-						numAlvo[bananas] = ",";
+				int chance = _rng.RandiRange(1, 100);
+
+				if (chance <= 15)
+				{
+					int op = _rng.RandiRange(0, 1);
+					numAlvo[i] = (op == 0) ? "√" : ",";
 					operadorGerado = true;
 					continue;
 				}
 			}
-			int numGerado = _rng.RandiRange(0,9);
-			numAlvo[bananas] = $"{numGerado}";
+
+			numAlvo[i] = _rng.RandiRange(0, 9).ToString();
 		}
 	}
 }

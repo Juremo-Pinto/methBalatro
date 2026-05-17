@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://t15ctd3ug6mc"
-path="res://.godot/imported/chaoticArtifact.png-4b2d9eb627edbe565fbd192d6f73e23d.ctex"
+uid="uid://djsiedq1hdqm3"
+path="res://.godot/imported/rand.png-f29952da7f25817bb943b43c3416c0b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Cards/Prk/chaoticArtifact.png"
-dest_files=["res://.godot/imported/chaoticArtifact.png-4b2d9eb627edbe565fbd192d6f73e23d.ctex"]
+source_file="res://Assets/Sprites/Cards/Prk/rand.png"
+dest_files=["res://.godot/imported/rand.png-f29952da7f25817bb943b43c3416c0b1.ctex"]
 
 [params]
 

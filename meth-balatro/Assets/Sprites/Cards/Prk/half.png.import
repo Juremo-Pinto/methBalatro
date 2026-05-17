@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cahesjetd4fu2"
-path="res://.godot/imported/equallyEven.png-80303bec596c4f7c9ab73135db25e747.ctex"
+uid="uid://b8lpslx8r00ht"
+path="res://.godot/imported/half.png-f6187e42d9c971158035dec4115d2d01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Cards/Prk/equallyEven.png"
-dest_files=["res://.godot/imported/equallyEven.png-80303bec596c4f7c9ab73135db25e747.ctex"]
+source_file="res://Assets/Sprites/Cards/Prk/half.png"
+dest_files=["res://.godot/imported/half.png-f6187e42d9c971158035dec4115d2d01.ctex"]
 
 [params]
 

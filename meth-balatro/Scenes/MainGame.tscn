@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://li8q2g1dch6a"]
 
 [ext_resource type="Texture2D" uid="uid://drv7n8fwfrurt" path="res://Assets/Sprites/GOD/godtest.png" id="1_k6vqf"]
-[ext_resource type="PackedScene" path="res://Scenes/Cards/Number.tscn" id="1_wyocf"]
+[ext_resource type="PackedScene" uid="uid://cj6osvkpfwhl" path="res://Scenes/Cards/Number.tscn" id="1_wyocf"]
 [ext_resource type="Texture2D" uid="uid://bsqcj1ogp1oa8" path="res://Assets/Sprites/GOD/pixil-frame-13.png" id="2_ev6kq"]
 [ext_resource type="Shader" uid="uid://8453cy7gbjgb" path="res://Scenes/theEyeofGod.gdshader" id="2_jn25s"]
 [ext_resource type="Texture2D" uid="uid://dhbjkr3cd3ir7" path="res://Assets/Sprites/HUD/hud.png" id="2_ktwve"]
-[ext_resource type="PackedScene" path="res://Scenes/Cards/Operator.tscn" id="2_r5sjn"]
+[ext_resource type="PackedScene" uid="uid://dqtrwgwg176eu" path="res://Scenes/Cards/Operator.tscn" id="2_r5sjn"]
 [ext_resource type="Shader" uid="uid://b6nnh8pik7js1" path="res://Shaders/shaderBgBottom.gdshader" id="3_r5sjn"]
-[ext_resource type="PackedScene" path="res://Scenes/Cards/Perk.tscn" id="3_yc6xl"]
+[ext_resource type="PackedScene" uid="uid://cldo6q0mln20j" path="res://Scenes/Cards/Perk.tscn" id="3_yc6xl"]
 [ext_resource type="Texture2D" uid="uid://dssk4ivf4knev" path="res://Assets/Sprites/HUD/botUi100.png" id="4_yc6xl"]
 [ext_resource type="Shader" uid="uid://djwxoaguhnkyf" path="res://Shaders/shaderBgMid.gdshader" id="5_k6vqf"]
 [ext_resource type="Texture2D" uid="uid://bgdfx0j27xdj0" path="res://Assets/Sprites/HUD/midUi89.png" id="6_ev6kq"]
@@ -192,11 +192,10 @@ size = Vector2(611, 221)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=733076342]
 z_index = 1
-position = Vector2(629, 98)
+position = Vector2(645, 99)
 scale = Vector2(0.32, 0.32)
 sprite_frames = SubResource("SpriteFrames_m1lyq")
 autoplay = "default"
-frame_progress = 0.575439
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/AnimatedSprite2D" unique_id=196039722]
 z_index = -1
@@ -208,24 +207,24 @@ texture = ExtResource("2_ev6kq")
 
 [node name="Digit0" parent="CanvasLayer/PlacarAlvo" unique_id=2141410384 instance=ExtResource("15_ktwve")]
 z_index = 5
-position = Vector2(942.6, 581.4)
+position = Vector2(901, 575)
 scale = Vector2(0.03, 0.03)
 
 [node name="Digit1" parent="CanvasLayer/PlacarAlvo" unique_id=313875167 instance=ExtResource("15_ktwve")]
 z_index = 5
-position = Vector2(995.39996, 581.60004)
+position = Vector2(967, 563)
 scale = Vector2(0.03, 0.03)
 intPos = 1
 
 [node name="Digit2" parent="CanvasLayer/PlacarAlvo" unique_id=1756187233 instance=ExtResource("15_ktwve")]
 z_index = 5
-position = Vector2(1049.6, 582.4)
+position = Vector2(1031, 575.00006)
 scale = Vector2(0.03, 0.03)
 intPos = 2
 
 [node name="Digit3" parent="CanvasLayer/PlacarAlvo" unique_id=839575889 instance=ExtResource("15_ktwve")]
 z_index = 5
-position = Vector2(1100.6, 582.4)
+position = Vector2(1096.0001, 568)
 scale = Vector2(0.03, 0.03)
 intPos = 3
 
@@ -234,14 +233,14 @@ intPos = 3
 [node name="Digit0" parent="CanvasLayer/PlacarAtual" unique_id=1324028418 instance=ExtResource("15_ktwve")]
 modulate = Color(0.25766784, 1, 1, 1)
 z_index = 5
-position = Vector2(918, 99.00001)
+position = Vector2(897, 73.00001)
 scale = Vector2(0.03, 0.03)
 isCurrent = true
 
 [node name="Digit1" parent="CanvasLayer/PlacarAtual" unique_id=74505768 instance=ExtResource("15_ktwve")]
 modulate = Color(0.25766784, 1, 1, 1)
 z_index = 5
-position = Vector2(974, 99.00009)
+position = Vector2(961, 81)
 scale = Vector2(0.03, 0.03)
 isCurrent = true
 intPos = 1
@@ -249,7 +248,7 @@ intPos = 1
 [node name="Digit2" parent="CanvasLayer/PlacarAtual" unique_id=438967438 instance=ExtResource("15_ktwve")]
 modulate = Color(0.25766784, 1, 1, 1)
 z_index = 5
-position = Vector2(1029.0001, 99)
+position = Vector2(1025.0001, 72)
 scale = Vector2(0.03, 0.03)
 isCurrent = true
 intPos = 2
@@ -257,7 +256,7 @@ intPos = 2
 [node name="Digit3" parent="CanvasLayer/PlacarAtual" unique_id=916403330 instance=ExtResource("15_ktwve")]
 modulate = Color(0.25766784, 1, 1, 1)
 z_index = 5
-position = Vector2(1085, 99)
+position = Vector2(1089.0001, 78)
 scale = Vector2(0.03, 0.03)
 isCurrent = true
 intPos = 3
@@ -271,10 +270,10 @@ anchor_left = 0.09548611
 anchor_top = 0.15432099
 anchor_right = 0.09548611
 anchor_bottom = 0.15432099
-offset_left = 186.0
-offset_top = 473.0
-offset_right = 186.0
-offset_bottom = 473.0
+offset_left = 124.0
+offset_top = 472.0
+offset_right = 124.0
+offset_bottom = 472.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Num2" parent="CanvasLayer/Cards" unique_id=538861363 instance=ExtResource("1_wyocf")]
@@ -284,10 +283,10 @@ anchor_left = 0.112847224
 anchor_top = 0.33024693
 anchor_right = 0.112847224
 anchor_bottom = 0.33024693
-offset_left = 302.0
-offset_top = 359.0
-offset_right = 302.0
-offset_bottom = 359.0
+offset_left = 218.0
+offset_top = 357.0
+offset_right = 218.0
+offset_bottom = 357.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Num3" parent="CanvasLayer/Cards" unique_id=1868754310 instance=ExtResource("1_wyocf")]
@@ -297,10 +296,10 @@ anchor_left = 0.09201389
 anchor_top = 0.49845678
 anchor_right = 0.09201389
 anchor_bottom = 0.49845678
-offset_left = 451.0
-offset_top = 251.0
-offset_right = 451.0
-offset_bottom = 251.0
+offset_left = 361.0
+offset_top = 248.0
+offset_right = 361.0
+offset_bottom = 248.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Num4" parent="CanvasLayer/Cards" unique_id=1125999039 instance=ExtResource("1_wyocf")]
@@ -310,9 +309,9 @@ anchor_left = 0.10069445
 anchor_top = 0.6743827
 anchor_right = 0.10069445
 anchor_bottom = 0.6743827
-offset_left = 561.0
+offset_left = 486.0
 offset_top = 136.00003
-offset_right = 561.0
+offset_right = 486.0
 offset_bottom = 136.00003
 metadata/_edit_use_anchors_ = true
 
@@ -323,35 +322,35 @@ anchor_left = 0.10069445
 anchor_top = 0.6743827
 anchor_right = 0.10069445
 anchor_bottom = 0.6743827
-offset_left = 677.0
-offset_top = 137.00003
-offset_right = 677.0
-offset_bottom = 137.00003
+offset_left = 623.0
+offset_top = 136.00003
+offset_right = 623.0
+offset_bottom = 136.00003
 metadata/_edit_use_anchors_ = true
 
 [node name="Operator" parent="CanvasLayer/Cards" unique_id=874623318 instance=ExtResource("2_r5sjn")]
-offset_left = 96.0
-offset_top = 155.0
-offset_right = 96.0
-offset_bottom = 155.0
+offset_left = 76.0
+offset_top = 268.0
+offset_right = 76.0
+offset_bottom = 268.0
 
 [node name="Operator2" parent="CanvasLayer/Cards" unique_id=121733765 instance=ExtResource("2_r5sjn")]
-offset_left = 96.0
-offset_top = 270.0
-offset_right = 96.0
-offset_bottom = 270.0
+offset_left = 77.0
+offset_top = 360.0
+offset_right = 77.0
+offset_bottom = 360.0
 
 [node name="Operator3" parent="CanvasLayer/Cards" unique_id=482041286 instance=ExtResource("2_r5sjn")]
-offset_left = 96.0
-offset_top = 388.0
-offset_right = 96.0
-offset_bottom = 388.0
+offset_left = 76.0
+offset_top = 460.0
+offset_right = 76.0
+offset_bottom = 460.0
 
 [node name="Operator4" parent="CanvasLayer/Cards" unique_id=1400772882 instance=ExtResource("2_r5sjn")]
-offset_left = 96.0
-offset_top = 506.0
-offset_right = 96.0
-offset_bottom = 506.0
+offset_left = 78.0
+offset_top = 562.0
+offset_right = 78.0
+offset_bottom = 562.0
 
 [node name="Perk" parent="CanvasLayer/Cards" unique_id=758262585 instance=ExtResource("3_yc6xl")]
 offset_left = 1061.0
@@ -463,24 +462,24 @@ menuScene = ExtResource("10_him8o")
 [node name="Node2D" parent="CanvasLayer" unique_id=878586670 instance=ExtResource("11_fgk2h")]
 modulate = Color(1, 1, 0.48235294, 1)
 z_index = 2
-position = Vector2(292, 95)
+position = Vector2(216, 76)
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=2001334555]
 modulate = Color(1, 1, 0.48235294, 1)
 z_index = 1
-offset_left = 345.0
-offset_top = 46.0
-offset_right = 443.0
-offset_bottom = 148.0
+offset_left = 295.0
+offset_top = 23.0
+offset_right = 393.0
+offset_bottom = 125.0
 texture = ExtResource("12_wn26v")
 expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer" unique_id=147591595]
 modulate = Color(1, 1, 0.48235294, 1)
-offset_left = 368.0
-offset_top = 39.0
-offset_right = 451.0
-offset_bottom = 150.0
+offset_left = 343.0
+offset_top = 21.0
+offset_right = 426.0
+offset_bottom = 132.0
 texture = ExtResource("13_cmrup")
 expand_mode = 1
 

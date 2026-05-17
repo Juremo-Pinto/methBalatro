@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8yck6ccghjsl"
-path="res://.godot/imported/balanceCoin.png-50897ad5e8ee104fe9f088101a2ce229.ctex"
+uid="uid://d10ubybb2vvhh"
+path="res://.godot/imported/minusOp.png-953d25c5425a0417a5a71264ee6c9c76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Cards/Prk/balanceCoin.png"
-dest_files=["res://.godot/imported/balanceCoin.png-50897ad5e8ee104fe9f088101a2ce229.ctex"]
+source_file="res://Assets/Sprites/Cards/Prk/minusOp.png"
+dest_files=["res://.godot/imported/minusOp.png-953d25c5425a0417a5a71264ee6c9c76.ctex"]
 
 [params]
 

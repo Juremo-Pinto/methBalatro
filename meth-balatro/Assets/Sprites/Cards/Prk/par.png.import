@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crvffhh2tspcw"
-path="res://.godot/imported/multiIchor.png-d6b91eb8d3d53f58c6040f0f3b5bf956.ctex"
+uid="uid://durw5kdu6n3si"
+path="res://.godot/imported/par.png-6a2fe0753c6d82d674aa950faad2ef04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Cards/Prk/multiIchor.png"
-dest_files=["res://.godot/imported/multiIchor.png-d6b91eb8d3d53f58c6040f0f3b5bf956.ctex"]
+source_file="res://Assets/Sprites/Cards/Prk/par.png"
+dest_files=["res://.godot/imported/par.png-6a2fe0753c6d82d674aa950faad2ef04.ctex"]
 
 [params]
 

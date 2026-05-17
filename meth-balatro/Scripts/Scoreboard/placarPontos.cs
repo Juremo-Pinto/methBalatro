@@ -3,56 +3,50 @@ using System;
 
 public partial class placarPontos : Sprite2D
 {
-	[Export]
-	public bool isCurrent;
-
-	[Export]
-	public int intPos;
-
-	[Export]
-	public Texture2D[] valNumerosText;
-
-	[Export]
-	public Texture2D[] valOpText;
-
-	public double numAtualSalvo = 0;
+	[Export] public bool isCurrent;
+	[Export] public int intPos;
+	[Export] public Texture2D[] valNumerosText;
+	[Export] public Texture2D[] valOpText;
 
 	public override void _Ready()
 	{
-		MathEventBus.Instance.MathSuccess += OnMathSuccess;
+		MathEventBus.Instance.MathSuccess += OnUpdate;
+		MathEventBus.Instance.LostGame += OnReset;
+		MathEventBus.Instance.WonGame += OnReset;
 
-		if (!isCurrent)
-		{
-			string valor = MathEventBus.Instance.numAlvo[intPos];
-
-			if (valor == "√")
-			{
-				Texture = valOpText[0];
-			}
-			else if (valor == ",")
-			{
-				Texture = valOpText[1];
-			}
-			else
-			{
-				Texture = valNumerosText[int.Parse(valor)];
-			}
-		}
+		UpdateVisual();
 	}
 
-	private void OnMathSuccess(string resultado)
+	private void OnUpdate(string _)
 	{
-		numAtualSalvo += Convert.ToDouble(resultado);
+		UpdateVisual();
+	}
 
-		if (numAtualSalvo > 9999)
-			numAtualSalvo = 9999;
+	private void OnReset()
+	{
+		UpdateVisual();
+	}
 
-		string texto = ((int)numAtualSalvo).ToString("0000");
-		char c = texto[intPos];
+	private void UpdateVisual()
+	{
+		string valor;
 
 		if (isCurrent)
+			valor = MathEventBus.Instance.numAtual[intPos];
+		else
+			valor = MathEventBus.Instance.numAlvo[intPos];
+
+		if (valor == "√")
 		{
-			Texture = valNumerosText[c - '0'];
+			Texture = valOpText[0];
+		}
+		else if (valor == ",")
+		{
+			Texture = valOpText[1];
+		}
+		else
+		{
+			Texture = valNumerosText[int.Parse(valor)];
 		}
 	}
 }
