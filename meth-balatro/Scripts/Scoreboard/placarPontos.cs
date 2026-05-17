@@ -23,19 +23,20 @@ public partial class placarPontos : Sprite2D
 
 		if (!isCurrent)
 		{
-			string valor = MathEventBus.Instance.numAlvo[intPos];
+			string str = MathEventBus.Instance.NumAlvo.ToString();
+			char valor = str[intPos];
 
-			if (valor == "√")
+			if (valor == '√')
 			{
 				Texture = valOpText[0];
 			}
-			else if (valor == ",")
+			else if (valor == ',')
 			{
 				Texture = valOpText[1];
 			}
 			else
 			{
-				Texture = valNumerosText[int.Parse(valor)];
+				Texture = valNumerosText[int.Parse($"{valor}")];
 			}
 		}
 	}

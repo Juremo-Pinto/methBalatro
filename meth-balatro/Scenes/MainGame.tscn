@@ -330,6 +330,7 @@ priority = -1
 script = ExtResource("14_im1vy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Area2D" unique_id=1690537226]
+visible = false
 position = Vector2(7.5, -5.5)
 shape = SubResource("RectangleShape2D_44i4l")
 

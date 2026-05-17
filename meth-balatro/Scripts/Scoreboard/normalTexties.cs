@@ -21,7 +21,7 @@ public partial class normalTexties : Sprite2D
 	private void OnMathSuccess(string resultado)
 	{
 		if(placarTentativas)
-		Texture = valNumerosText[MathEventBus.Instance.numTentativas];
+		Texture = valNumerosText[MathEventBus.Instance.NumTentativas];
 	}
 
 	private void OnMathFail()
