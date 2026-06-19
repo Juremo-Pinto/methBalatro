@@ -107,6 +107,39 @@ public partial class MathEventBus : Node
 		if (texto.StartsWith("0,"))
 			texto = texto.Substring(1);
 
+		if (texto.Length > 4)
+		{
+			if (texto.Contains(","))
+			{
+				var partes = texto.Split(',');
+				var inteiro = partes[0];
+				var frac = partes.Length > 1 ? partes[1] : string.Empty;
+
+				if (inteiro.Length >= 3)
+				{
+					texto = inteiro.Substring(inteiro.Length - 4);
+				}
+				else
+				{
+					int maxFrac = 4 - inteiro.Length - 1;
+					if (maxFrac <= 0)
+					{
+						texto = inteiro.Length > 4 ? inteiro.Substring(inteiro.Length - 4) : inteiro.PadLeft(4, '0');
+					}
+					else
+					{
+						if (frac.Length > maxFrac)
+							frac = frac.Substring(0, maxFrac);
+						texto = inteiro + "," + frac;
+					}
+				}
+			}
+			else
+			{
+				texto = texto.Substring(texto.Length - 4);
+			}
+		}
+
 		string[] novo = new string[4];
 
 		int j = texto.Length - 1;

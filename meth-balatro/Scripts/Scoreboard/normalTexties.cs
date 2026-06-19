@@ -23,7 +23,7 @@ public partial class normalTexties : Sprite2D
 	private void OnMathSuccess(string resultado)
 	{
 		if(placarTentativas)
-		Texture = valNumerosText[MathEventBus.Instance.NumTentativas];
+		Texture = valNumerosText[MathEventBus.Instance.numTentativas];
 	}
 	private void onGameLost()
 	{
